@@ -20,19 +20,19 @@ const data = {
         ] 
     },
     experiences :{
-        [
+        experiences :[
             {
                 function : "Animateur-Coordinateur",
                 location : "Maison de Jeunes de Vielsalm ",
                 date : "2022-2024",
                 description: "Prise en charge de la coordination et d'une partie de l'animation de la maison de jeunes de Vielsalm durant ses 2 premières années d'existence. J'ai abondonné cet emploi dans le but de me réorienter professionnelement",
-                competences: ["Coordination", "Gestion de conflit", "Gestion de projet"],
+                competences: ["Coordination", "Gestion de conflit", "Gestion de projet"]
             },
             {
                 function : "Formateur techniques de batiment",
                 location : "Régie de quartier de Dison",
                 date : "2020-2022",
-                description: "Prise en charge de la coordination et d'une partie de l'animation de la maison de jeunes de Vielsalm durant ses 2 premières années d'existence. J'ai abondonné cet emploi dans le but de me réorienter professionnelement",
+                description: "Emploi a caractère hautement social",
                 competences: ["Coordination", "Gestion de conflit", "Gestion de projet"],
             },
             {
