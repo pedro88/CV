@@ -26,14 +26,14 @@ const Window = ({ type }) => {
 			>
 				{/* <div className='window'>  */}
 				<div
-					className={`border-solid border-b-3 bg-[#119DA4] flex flex-row justify-between items-center col-start-1 col-end-4 transition-all duration-500 ease-in-out
-        ${
-			type === "experiences" ||
-			type === "formations" ||
-			type === "competences"
-				? "w-[38vw]"
-				: "w-[80vw]"
-		}
+					className={`border-solid border-b-3 bg-[#119DA4] flex 
+            flex-row justify-between items-center col-start-1 col-end-4 ${
+				type === "experiences" ||
+				type === "formations" ||
+				type === "competences"
+					? "w-[38vw]"
+					: "w-[80vw]"
+			}
     ${close ? "hidden" : "block"}`}
 				>
 					{/* <div className='window-name'> */}
@@ -48,13 +48,17 @@ const Window = ({ type }) => {
 						</h2>
 					)}
 					<div className={`flex flex-row mr-5`}>
-						<div className="w-[20px] h-[20px] border-solid border-2 m-1 flex flex-row justify-center items-center hover:scale-110 bg-white shadow-[3px_3px_0px_#13505B]">
+						<div className="w-[20px] h-[20px] border-solid border-2 m-1 
+            flex flex-row justify-center items-center hover:scale-110
+             bg-white shadow-[3px_3px_0px_#13505B] duration-100 ease-out">
 							<div
 								onClick={handleReduce}
 								className="w-[10px] h-[10px] bg-contain bg-[url(../public/ressources/icons/g2.png)] "
 							></div>
 						</div>
-						<div className="w-[20px] h-[20px] border-solid border-2 m-1 flex flex-row justify-center items-center hover:scale-110 bg-white shadow-[3px_3px_0px_#13505B] ">
+						<div className="w-[20px] h-[20px] border-solid border-2 m-1 
+            flex flex-row justify-center items-center hover:scale-110
+             bg-white shadow-[3px_3px_0px_#13505B] duration-100 ease-out">
 							<div
 								onClick={handleClose}
 								className="w-[10px] h-[10px] bg-contain bg-[url(../public/ressources/icons/g1.png)] "

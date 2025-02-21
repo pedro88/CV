@@ -16,7 +16,9 @@ const WindowContent = ({ type }) => {
 								<div className=" flex flex-row justify-between ">
 
 								{comp.skill}
-								<input type="range" value={comp.level} min="0" max="5" className="appearance-none h-2 border-2 accent-[#119DA4] rounded-none shadow-[3px_2px_0px_#13505B] bg-white hover:scale-110 " />
+								<input type="range" value={comp.level} min="0" max="5" 
+								className="appearance-none h-2 border-2 accent-[#119DA4] rounded-none 
+								shadow-[3px_2px_0px_#13505B] bg-white hover:scale-105 duration-100 ease-out" />
 								</div>
 							</li>
 						))}
@@ -26,7 +28,10 @@ const WindowContent = ({ type }) => {
 			case "coordonnate":
 				return (
 					<>
-						<div className="bg-[url(../public/ressources/photo/DSC_6335.webp)] bg-cover bg-center col-start-1 col-end-2 m-5 border-2"></div>
+						<div className="shadow-[3px_2px_0px_#13505B] hover:scale-102 
+						duration-300 ease-out bg-[url(../public/ressources/photo/DSC_6335.webp)]
+						hover:bg-[url(../public/ressources/photo/DSC_6335-2.webp)]
+						bg-cover bg-center col-start-1 col-end-2 m-5 border-2"></div>
 						<div className="col-start-2 col-end-3 mt-5 mb-5 pl-10 border-l-3 border-dashed">
 							<div>
 								<h2 className="underline font-medium text-lg" >Coordonnates</h2>
@@ -111,7 +116,9 @@ const WindowContent = ({ type }) => {
 												{item.flag} 
 												<div className="flex flex-row justify-between">
 												{item.language} :{" "}
-												<input type="range" value={item.level} min="0" max="5" className="mr-30 appearance-none h-2 border-2 accent-[#119DA4] rounded-none shadow-[3px_2px_0px_#13505B] bg-white hover:scale-110"/>
+												<input type="range" value={item.level} min="0" max="5" 
+												className="mr-30 appearance-none h-2 border-2 accent-[#119DA4] rounded-none 
+												shadow-[3px_2px_0px_#13505B] bg-white hover:scale-110 duration-105 ease-out"/>
 												</div>
 
 											</li>
