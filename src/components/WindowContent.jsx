@@ -9,14 +9,14 @@ const WindowContent = ({ type }) => {
 		switch (type) {
 			case "competences":
 				return (
-					<ul>
+					<ul className="mt-5 mb-5">
 						{data.competences.competences.map((comp) => (
 							<li className="list-disc ml-15 mr-30" key={comp}>
 								<img src={"comp.logo"} alt="" />
 								<div className=" flex flex-row justify-between ">
 
 								{comp.skill}
-								<input type="range" value={comp.level} min="0" max="5" />
+								<input type="range" value={comp.level} min="0" max="5" className="appearance-none h-2 border-2 accent-[#119DA4] rounded-none shadow-[3px_2px_0px_#13505B] bg-white hover:scale-110 " />
 								</div>
 							</li>
 						))}
@@ -64,14 +64,14 @@ const WindowContent = ({ type }) => {
 									{data.coordonnate.address}
 								</h3>
 							</div>
-							<div className="flex justify-around mt-5 mb-5">
+							<div className="flex justify-center  mt-5 mb-5 -ml-10 ">
 								{data.coordonnate.social.map((el) => (
-									<div className="flex flex-col underline relative">
+									<div key={el} className="flex flex-col items-center underline relative">
 									<h4>{el.social}</h4>
-									<img src={el.qrcode} alt="" className="h-35" />
+									<img src={el.qrcode} alt="" className="h-30 " />
 									
-									<p className=" absolute -bottom-7" >{el.link2}</p>
-									<p className=" absolute -bottom-3" >{el.link1}</p>
+									{/* <p className=" absolute -bottom-7" >{el.link2}</p>
+									<p className=" absolute -bottom-3" >{el.link1}</p> */}
 									</div>
 								))}
 							</div>
@@ -101,7 +101,7 @@ const WindowContent = ({ type }) => {
 								</ul>
 							</div>
 							<div>
-								<h2 className="underline font-medium text-lg">Language</h2>
+								<h2 className="underline font-medium text-lg mt-5">Language</h2>
 							</div>
 							<div>
 								<ul>
@@ -111,7 +111,7 @@ const WindowContent = ({ type }) => {
 												{item.flag} 
 												<div className="flex flex-row justify-between">
 												{item.language} :{" "}
-												<input type="range" value={item.level} min="0" max="5" className="mr-30"/>
+												<input type="range" value={item.level} min="0" max="5" className="mr-30 appearance-none h-2 border-2 accent-[#119DA4] rounded-none shadow-[3px_2px_0px_#13505B] bg-white hover:scale-110"/>
 												</div>
 
 											</li>
@@ -171,6 +171,7 @@ const WindowContent = ({ type }) => {
 				});
 		}
 	};
+
 
 	return <>{windowType({ type })}</>;
 };

@@ -93,8 +93,8 @@ const data = {
             {skill : "JS/React" , level : "4", logo: ""},
             {skill : "Node.js/Express" , level : "4", logo: ""},
             {skill : "PHP/Laravel" , level : "3", logo: ""},
-            {skill : "CSS/Tailwind" , level : "3", logo: ""},
-            {skill : "SQL" , level : "3", logo: ""},
+            {skill : "CSS/Tailwind" , level : "4", logo: ""},
+            {skill : "SQL" , level : "2", logo: ""},
         ]
 
     }
