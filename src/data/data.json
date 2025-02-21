@@ -1,0 +1,16 @@
+{
+    "coordonnate": {
+        "name" : "Pierre",
+        "lastName" : "Sandré",
+        "GSM" : "0484966225",
+        "email" : "sandrep_85@hotmail.com",
+        "address" : "Chevofosse, 2 - 4960 Malmedy",
+        "interest" : ["argentic photography", "3d printing", "gardenning"],
+        "language" : [
+            {"language" : "French", "level" : "Mother tongue"},
+            {"language" : "English", "level" : "Very good"},
+            {"language" : "Spanish", "level" : "Very Good"},
+            {"language" : "German", "level" : "Basic"}
+        ] 
+    }
+}
