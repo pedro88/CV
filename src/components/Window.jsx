@@ -22,10 +22,10 @@ const Window = ({type}) => {
             <h2 className='ml-5 pt-5 pb-5 text-xl font-bold'>{type}</h2>
         )}
             <div className='flex flex-row mr-5'>
-                <div className='w-[20px] h-[20px] border-solid border-2 m-1 rounded-md flex flex-row justify-center item-center hover:animate-bounce'>
+                <div className='w-[20px] h-[20px] border-solid border-2 m-1 rounded-md flex flex-row justify-center items-center hover:animate-bounce'>
                     <div className='w-[15px] h-[15px] bg-contain '></div>
                 </div>
-                <div className='w-[20px] h-[20px] border-solid border-2 m-1 rounded-md flex flex-row justify-center item-center hover:animate-bounce'>
+                <div className='w-[20px] h-[20px] border-solid border-2 m-1 rounded-md flex flex-row justify-center items-center hover:animate-bounce'>
                     <div className='w-[15px] h-[15px] bg-contain bg-[url(../public/ressources/icons/g1.png)] '></div>
                 </div>
             </div>

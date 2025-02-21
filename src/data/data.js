@@ -14,11 +14,17 @@ const data = {
         interest : ["argentic photography", "3d printing", "gardenning"],
         interestLogo : ["", "", ""],
         language : [
-            {language : "French", level : "Mother tongue", flag : ""},
-            {language : "English", level : "Very good", flag : ""},
-            {language : "Spanish", level : "Very Good", flag : ""},
-            {language : "German", level : "Basic", flag : ""}
-        ] 
+            {language : "French", level : "5", flag : ""},
+            {language : "English", level : "4", flag : ""},
+            {language : "Spanish", level : "4", flag : ""},
+            {language : "German", level : "1", flag : ""}
+        ],
+        social :[
+            {social : "GitHub", qrcode : "./public/ressources/QRCode/github.svg", link1 : "www.github.com", link2 : "/pedro88" },
+            {social : "Linkedin", qrcode : "./public/ressources/QRCode/linkedin.svg", link1 : "www.linkedin.com", link2 :"/in/pierre-sandre" },
+            {social : "Codewars", qrcode : "./public/ressources/QRCode/linkedin.svg", link1 : "www.codewars.com", link2 :"/users/pedro88" }
+
+        ]
     },
     experiences :{
         experiences :[

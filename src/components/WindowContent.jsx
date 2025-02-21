@@ -2,15 +2,22 @@ import React from "react";
 import data from "../data/data.js";
 
 const WindowContent = ({ type }) => {
+
+
+
 	const windowType = () => {
 		switch (type) {
 			case "competences":
 				return (
 					<ul>
 						{data.competences.competences.map((comp) => (
-							<li className="list-disc ml-15" key={comp}>
+							<li className="list-disc ml-15 mr-30" key={comp}>
 								<img src={"comp.logo"} alt="" />
+								<div className=" flex flex-row justify-between ">
+
 								{comp.skill}
+								<input type="range" value={comp.level} min="0" max="5" />
+								</div>
 							</li>
 						))}
 					</ul>
@@ -19,14 +26,14 @@ const WindowContent = ({ type }) => {
 			case "coordonnate":
 				return (
 					<>
-						<div className="bg-[url(../public/ressources/photo/DSC_6335.webp)] bg-cover bg-center col-start-1 col-end-2 "></div>
-						<div className="col-start-2 col-end-3 mt-5 mb-5 pl-10">
+						<div className="bg-[url(../public/ressources/photo/DSC_6335.webp)] bg-cover bg-center col-start-1 col-end-2 m-5 border-2"></div>
+						<div className="col-start-2 col-end-3 mt-5 mb-5 pl-10 border-l-3 border-dashed">
 							<div>
-								<h2>Coordonnates</h2>
+								<h2 className="underline font-medium text-lg" >Coordonnates</h2>
 							</div>
 							<div className="flex">
 								<img src={data.coordonnate.nameLogo} alt="" />
-								<h3>name </h3>
+								<h3 className="underline font-medium">name </h3>
 								<h3>
 									{" : "}
 									{data.coordonnate.name}{" "}
@@ -35,7 +42,7 @@ const WindowContent = ({ type }) => {
 							</div>
 							<div className="flex">
 								<img src={data.coordonnate.GSMLogo} alt="" />
-								<h3>GSM </h3>
+								<h3 className="underline font-medium">GSM </h3>
 								<h3>
 									{" : "}
 									{data.coordonnate.GSM}
@@ -43,7 +50,7 @@ const WindowContent = ({ type }) => {
 							</div>
 							<div className="flex">
 								<img src={data.coordonnate.emailLogo} alt="" />
-								<h3>email </h3>
+								<h3 className="underline font-medium">email </h3>
 								<h3>
 									{" : "}
 									{data.coordonnate.email}
@@ -51,22 +58,33 @@ const WindowContent = ({ type }) => {
 							</div>
 							<div className="flex">
 								<img src={data.coordonnate.adressLogo} alt="" />
-								<h3>address </h3>
+								<h3 className="underline font-medium">address </h3>
 								<h3>
 									{" : "}
 									{data.coordonnate.address}
 								</h3>
 							</div>
+							<div className="flex justify-around mt-5 mb-5">
+								{data.coordonnate.social.map((el) => (
+									<div className="flex flex-col underline relative">
+									<h4>{el.social}</h4>
+									<img src={el.qrcode} alt="" className="h-35" />
+									
+									<p className=" absolute -bottom-7" >{el.link2}</p>
+									<p className=" absolute -bottom-3" >{el.link1}</p>
+									</div>
+								))}
+							</div>
 						</div>
 						<div className="col-start-3 col-end-4 border-l-3 border-dashed mt-5 mb-5 pl-10 ">
 							<div>
-								<h2>Interest</h2>
+								<h2 className="underline font-medium text-lg">Interest</h2>
 							</div>
 							<div>
 								<ul>
 									{data.coordonnate.interest.map(
 										(item, index) => (
-											<li key={index}>
+											<li key={index} className="list-disc" >
 												<img
 													src={
 														data.coordonnate
@@ -83,15 +101,19 @@ const WindowContent = ({ type }) => {
 								</ul>
 							</div>
 							<div>
-								<h2>Language</h2>
+								<h2 className="underline font-medium text-lg">Language</h2>
 							</div>
 							<div>
 								<ul>
 									{data.coordonnate.language.map(
 										(item, index) => (
-											<li key={index}>
-												{item.flag} {item.language} :{" "}
-												{item.level}
+											<li key={index} className="list-disc">
+												{item.flag} 
+												<div className="flex flex-row justify-between">
+												{item.language} :{" "}
+												<input type="range" value={item.level} min="0" max="5" className="mr-30"/>
+												</div>
+
 											</li>
 										)
 									)}
@@ -101,18 +123,18 @@ const WindowContent = ({ type }) => {
 					</>
 				);
 			case "experiences":
-				return data.experiences.experiences.map((exp) => {
+				return data.experiences.experiences.map((exp, index) => {
 					return (
 						<div
-							className="ml-5 mr-5 border-b-3 border-dashed pb-5  "
-							key={exp.date}
+							className={`ml-5 mr-5 border-b-3 pb-5 ${index === data.experiences.experiences.length-1 ? "border-none" : "border-dashed"}`}   
+							key={exp.date} 
 						>
 							<div className="flex flex-row justify-between  mt-5 mb-2">
-								<h3 className="ml-5 text-lg">{exp.function}</h3>
-								<h3 className="ml-5 text-lg">{exp.location}</h3>
-								<h4 className="mr-10 text-base">{exp.date}</h4>
+								<h3 className="ml-5 text-lg underline font-medium">{exp.function}</h3>
+								<h4 className="mr-10 text-base italic">{exp.date}</h4>
 							</div>
-							<p className="mb-2">{exp.description}</p>
+								<h3 className="text-lg ml-5 italic">{exp.location}</h3>
+							<p className="mb-2 ml-5 whitespace-pre-line">{exp.description}</p>
 							<ul>
 								{exp.competences.map((item) => (
 									<li className="list-disc ml-10" key={item}>
@@ -126,17 +148,17 @@ const WindowContent = ({ type }) => {
 			case "function":
 				return;
 			case "formations":
-				return data.formations.formations.map((form) => {
+				return data.formations.formations.map((form, index) => {
 					return (
 						<div
-							className="ml-5 mr-5 border-b-3 border-dashed pb-5 "
+							className={`ml-5 mr-5 border-b-3 pb-5 ${index === data.formations.formations.length-1 ? "border-none" : "border-dashed"}`}
 							key={form.date}
 						>
 							<div className="flex flex-row justify-between  mt-5 mb-2">
-								<h3 className="ml-5 text-lg">{form.title}</h3>
-								<h4 className="mr-10 text-base">{form.date}</h4>
+								<h3 className="ml-5 text-lg underline font-medium">{form.title}</h3>
+								<h4 className="mr-10 text-base italic">{form.date}</h4>
 							</div>
-							<p className="mb-2 ml-5">{form.location}</p>
+							<p className="mb-2 ml-5 italic text-lg">{form.location}</p>
 							<ul>
 								{form.competences.map((item) => (
 									<li className="list-disc ml-10" key={item}>
