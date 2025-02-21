@@ -10,13 +10,13 @@ const WindowContent = ({ type }) => {
 			case "coordonnate":
 				return (
 					<>
-                        <div className="column-1">
+                        <div className="bg-[url(../public/ressources/photo/DSC_6335.webp)] bg-cover bg-center col-start-1 col-end-2 ">
                         </div>
-						<div className="column-2">
+						<div className="col-start-2 col-end-3 mt-5 mb-5 pl-5">
 							<div>
 								<h2>Coordonnates</h2>
 							</div>
-							<div className="coordonnate-item">
+							<div className="flex">
 								<img src={data.coordonnate.nameLogo} alt="" />
 								<h3>name </h3>
 								<h3>
@@ -24,26 +24,26 @@ const WindowContent = ({ type }) => {
 									{data.coordonnate.lastName}
 								</h3>
 							</div>
-							<div className="coordonnate-item">
+							<div className="flex">
 								<img src={data.coordonnate.GSMLogo} alt="" />
 								<h3>GSM </h3>
 								<h3>
                                 {" : "}{data.coordonnate.GSM}</h3>
 							</div>
-							<div className="coordonnate-item">
+							<div className="flex">
 								<img src={data.coordonnate.emailLogo} alt="" />
 								<h3>email </h3>
 								<h3>
                                 {" : "}{data.coordonnate.email}</h3>
 							</div>
-							<div className="coordonnate-item">
+							<div className="flex">
 								<img src={data.coordonnate.adressLogo} alt="" />
 								<h3>address </h3>
 								<h3>
                                 {" : "}{data.coordonnate.address}</h3>
 							</div>
 						</div>
-						<div className="column-3">
+						<div className="col-start-3 col-end-4 border-l-3 border-dashed mt-5 mb-5 pl-5 ">
 							<div>
 								<h2>Interest</h2>
 							</div>

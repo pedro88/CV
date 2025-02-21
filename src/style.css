@@ -1,4 +1,7 @@
-.display {
+@import "tailwindcss"
+
+
+/* .display {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,7 +90,7 @@
     width: 15px;
     height: 15px;
     background-size: contain;
-    /*Change the logo*/
+
 }
 
 .name {
@@ -101,4 +104,4 @@
 h3 {
     margin : 0;
     margin: 3px;
-}
+} */
