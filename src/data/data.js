@@ -1,5 +1,6 @@
 
 const data = {
+    function : "Junior FullStack Developper",
     coordonnate: {
         name : "Pierre",
         lastName : "Sandré",
@@ -53,9 +54,42 @@ const data = {
 
     },
     formations :{
+        formations : [
+            {
+                title : "Junior Developper",
+                location :"BeCode - Liège",
+                date : "2024-2025",
+                competences : [
+                    "JS",
+                    "React",
+                    "CSS",
+                    "PHP",
+                    "Laravel",
+                    "etc."
+                ]
+            },
+            {
+                title : "Cours A et B en agriculture Bio",
+                location :"Le Crabe - Jodoigne",
+                date : "2014-2016",
+                competences : [
+                    "maraichage",
+                    "relation client",
+                    "gestion de projet",
+                    "comptabilité"
+                ]
+            }
+        ]
 
     },
     competences : {
+        competences :[
+            {skill : "JS/React" , level : "4", logo: ""},
+            {skill : "Node.js/Express" , level : "4", logo: ""},
+            {skill : "PHP/Laravel" , level : "3", logo: ""},
+            {skill : "CSS/Tailwind" , level : "3", logo: ""},
+            {skill : "SQL" , level : "3", logo: ""},
+        ]
 
     }
 }
