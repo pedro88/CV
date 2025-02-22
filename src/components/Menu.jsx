@@ -27,7 +27,7 @@ const Menu = () => {
         <img className=' h-15 w-15 mt-3 hover:scale-105 duration-100 ease-out' src="./pdf.png" alt="" />
         <img className=' h-15 w-15 mt-3 hover:scale-105 duration-100 ease-out' src="./printer.png" alt="" />
         <img className=' h-15 w-15 mt-3 hover:scale-105 duration-100 ease-out' src="./write.png" alt="" />
-        <img className=' h-10 mt-3' src="./public/ressources/menu/menu-half-border.png" alt=""/>
+        <img className=' h-10 mt-3' src="./menu-half-border.png" alt=""/>
 
     </div>
     </div>
