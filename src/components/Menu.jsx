@@ -15,7 +15,7 @@ const Menu = () => {
         <div onClick={handleMenu} className="hover:scale-102 duration-100 ease-out">
 
         <img className=' h-10' src="./public/ressources/menu/menu-half-border.png" alt=""/>
-        <img className={` h-10 mt-0.5 ${menu ? "hidden" : "block"}`} src="./public/ressources/menu/menu-half-border.png" alt=""/>
+        <img className={` h-10 mt-0.5 ${menu ? "hidden" : "block"}`} src="./menu-half-border.png" alt=""/>
 
         </div>
     <div className={`flex flex-col items-center ${menu ? "block" : "hidden"}`}>
