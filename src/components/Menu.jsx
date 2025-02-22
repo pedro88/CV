@@ -19,14 +19,14 @@ const Menu = () => {
 
         </div>
     <div className={`flex flex-col items-center ${menu ? "block" : "hidden"}`}>
-        <img className=' h-15 w-15 mt-3 hover:scale-105 duration-100 ease-out' src="../public/ressources/menu/function.png" alt="" />
-        <img className=' h-13 w-15 mt-3 hover:scale-105 duration-100 ease-out' src="../public/ressources/menu/profile.png" alt="" />
-        <img className=' h-15 w-15 mt-3 hover:scale-105 duration-100 ease-out' src="../public/ressources/menu/experiences.png" alt="" />
-        <img className=' h-15 w-15 mt-3 hover:scale-105 duration-100 ease-out' src="../public/ressources/menu/formation.png" alt="" />
-        <img className=' h-15 w-14 mt-3 hover:scale-105 duration-100 ease-out' src="../public/ressources/menu/skill.png" alt="" />
-        <img className=' h-15 w-15 mt-3 hover:scale-105 duration-100 ease-out' src="../public/ressources/menu/pdf.png" alt="" />
-        <img className=' h-15 w-15 mt-3 hover:scale-105 duration-100 ease-out' src="../public/ressources/menu/printer.png" alt="" />
-        <img className=' h-15 w-15 mt-3 hover:scale-105 duration-100 ease-out' src="../public/ressources/menu/write.png" alt="" />
+        <img className=' h-15 w-15 mt-3 hover:scale-105 duration-100 ease-out' src="/public/ressources/menu/function.png" alt="" />
+        <img className=' h-13 w-15 mt-3 hover:scale-105 duration-100 ease-out' src="/public/ressources/menu/profile.png" alt="" />
+        <img className=' h-15 w-15 mt-3 hover:scale-105 duration-100 ease-out' src="/public/ressources/menu/experiences.png" alt="" />
+        <img className=' h-15 w-15 mt-3 hover:scale-105 duration-100 ease-out' src="/public/ressources/menu/formation.png" alt="" />
+        <img className=' h-15 w-14 mt-3 hover:scale-105 duration-100 ease-out' src="/public/ressources/menu/skill.png" alt="" />
+        <img className=' h-15 w-15 mt-3 hover:scale-105 duration-100 ease-out' src="/public/ressources/menu/pdf.png" alt="" />
+        <img className=' h-15 w-15 mt-3 hover:scale-105 duration-100 ease-out' src="/public/ressources/menu/printer.png" alt="" />
+        <img className=' h-15 w-15 mt-3 hover:scale-105 duration-100 ease-out' src="/public/ressources/menu/write.png" alt="" />
         <img className=' h-10 mt-3' src="./public/ressources/menu/menu-half-border.png" alt=""/>
 
     </div>
