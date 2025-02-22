@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-5.0 -10.0 110.0 135.0"
+   id="svg10"
+   sodipodi:docname="pdf-border.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     id="namedview10"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.1012193"
+     inkscape:cx="38.403213"
+     inkscape:cy="53.764499"
+     inkscape:window-width="1680"
+     inkscape:window-height="979"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg10" />
+  <path
+     d="m57.578 66.672v-3.0312h3.0312v-3.0312h-3.0312v-3.0312h6.0625v-3.0312h-9.0938v15.156h3.0312z"
+     id="path1"
+     style="fill:#13505b;fill-opacity:1"
+     inkscape:export-filename="pdf-border.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <path
+     d="m48.484 69.703v-3.0312h-3.0312v-9.0938h3.0312v-3.0312h-6.0625v15.156z"
+     id="path2"
+     style="fill:#13505b;fill-opacity:1" />
+  <path
+     d="m48.484 63.641v3.0312h3.0312v-9.0938h-3.0312z"
+     id="path3"
+     style="fill:#13505b;fill-opacity:1" />
+  <path
+     d="m36.359 57.578h3.0312v3.0312h-3.0312z"
+     id="path4"
+     style="fill:#13505b;fill-opacity:1" />
+  <path
+     d="m33.328 66.672v-3.0312h3.0312v-3.0312h-3.0312v-3.0312h3.0312v-3.0312h-6.0625v15.156h3.0312z"
+     id="path5"
+     style="fill:#13505b;fill-opacity:1" />
+  <path
+     d="m78.781 12.125h-3.0312v3.0312h-3.0156v-3.0312h3.0156v-3.0312h-3.0156v-3.0312h-42.438v9.0938h-9.0781v36.359h51.516v-3.0312h-39.406v-39.391h36.375v9.0938h9.0781v63.625h-45.453v-6.0625h39.406v-3.0156h-51.516v21.203h54.531v-9.0938h6.0625v-69.688h-3.0312zm-48.484 9.0938v27.266h-6.0469v-30.297h6.0469zm42.438 66.656v3.0312h-48.484v-15.156h6.0469v9.0938h42.438z"
+     id="path6"
+     style="fill:#13505b;fill-opacity:1" />
+  <path
+     d="m72.734 57.578v15.156h3.0156v-21.219h-3.0156z"
+     id="path7"
+     style="fill:#13505b;fill-opacity:1" />
+  <path
+     d="m24.25 66.672h3.0156v3.0312h-3.0156z"
+     id="path8"
+     style="fill:#13505b;fill-opacity:1" />
+  <path
+     d="m21.219 66.672v-15.156h-3.0312v21.219h3.0312z"
+     id="path9"
+     style="fill:#13505b;fill-opacity:1" />
+  <path
+     d="m 55.587293,64.252319 v -3.0312 h 3.0312 v -3.0312 h -3.0312 v -3.0312 h 6.0625 v -3.0312 h -9.0938 v 15.156 h 3.0312 z"
+     id="path1-2"
+     style="fill:#119da4;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="m 46.493293,67.283319 v -3.0312 h -3.0312 v -9.0938 h 3.0312 v -3.0312 h -6.0625 v 15.156 z"
+     id="path2-4"
+     style="fill:#119da4;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="m 46.493293,61.221319 v 3.0312 h 3.0312 v -9.0938 h -3.0312 z"
+     id="path3-6"
+     style="fill:#119da4;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="m 34.368293,55.158319 h 3.0312 v 3.0312 h -3.0312 z"
+     id="path4-8"
+     style="fill:#119da4;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="m 31.337293,64.252319 v -3.0312 h 3.0312 v -3.0312 h -3.0312 v -3.0312 h 3.0312 v -3.0312 h -6.0625 v 15.156 h 3.0312 z"
+     id="path5-4"
+     style="fill:#119da4;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="m 76.790293,9.7053194 h -3.0312 v 3.0311996 h -3.0156 V 9.7053194 h 3.0156 V 6.6741193 h -3.0156 v -3.0312 h -42.438 v 9.0937997 h -9.0781 v 36.359 h 51.516 v -3.0312 h -39.406 V 6.6735193 h 36.375 v 9.0937997 h 9.0781 v 63.625 h -45.453 v -6.0625 h 39.406 v -3.0156 h -51.516 v 21.203 h 54.531 v -9.0938 h 6.0625 v -69.688 h -3.0312 z m -48.484,9.0937996 v 27.266 h -6.0469 v -30.297 h 6.0469 z m 42.438,66.656 v 3.0312 h -48.484 v -15.156 h 6.0469 v 9.0938 h 42.438 z"
+     id="path6-7"
+     style="fill:#119da4;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="m 70.743293,55.158319 v 15.156 h 3.0156 v -21.219 h -3.0156 z"
+     id="path7-7"
+     style="fill:#119da4;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="m 22.259293,64.252319 h 3.0156 v 3.0312 h -3.0156 z"
+     id="path8-3"
+     style="fill:#119da4;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="m 19.228293,64.252319 v -15.156 h -3.0312 v 21.219 h 3.0312 z"
+     id="path9-0"
+     style="fill:#119da4;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+</svg>

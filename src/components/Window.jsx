@@ -22,7 +22,7 @@ const Window = ({ type }) => {
 
 			<div
 				className={`border-solid border-3 shadow-[10px_8px_0px_#13505B] m-5  
-      ${close ? "hidden" : "block"}`}
+      	${close ? "hidden" : "block"}`}
 			>
 				{/* <div className='window'>  */}
 				<div
@@ -34,7 +34,7 @@ const Window = ({ type }) => {
 					? "w-[38vw]"
 					: "w-[80vw]"
 			}
-    ${close ? "hidden" : "block"}`}
+    			${close ? "hidden" : "block"}`}
 				>
 					{/* <div className='window-name'> */}
 
@@ -48,17 +48,21 @@ const Window = ({ type }) => {
 						</h2>
 					)}
 					<div className={`flex flex-row mr-5`}>
-						<div className="w-[20px] h-[20px] border-solid border-2 m-1 
+						<div
+							className="w-[20px] h-[20px] border-solid border-2 m-1 
             flex flex-row justify-center items-center hover:scale-110
-             bg-white shadow-[3px_3px_0px_#13505B] duration-100 ease-out">
+             bg-white shadow-[3px_3px_0px_#13505B] duration-100 ease-out"
+						>
 							<div
 								onClick={handleReduce}
 								className="w-[10px] h-[10px] bg-contain bg-[url(../public/ressources/icons/g2.png)] "
 							></div>
 						</div>
-						<div className="w-[20px] h-[20px] border-solid border-2 m-1 
+						<div
+							className="w-[20px] h-[20px] border-solid border-2 m-1 
             flex flex-row justify-center items-center hover:scale-110
-             bg-white shadow-[3px_3px_0px_#13505B] duration-100 ease-out">
+             bg-white shadow-[3px_3px_0px_#13505B] duration-100 ease-out"
+						>
 							<div
 								onClick={handleClose}
 								className="w-[10px] h-[10px] bg-contain bg-[url(../public/ressources/icons/g1.png)] "
@@ -76,9 +80,9 @@ const Window = ({ type }) => {
 			type === "competences"
 				? "w-[38vw]"
 				: "w-[80vw] grid grid-rows-[auto auto] grid-cols-3"
-		} ${reduce ? "hidden" : "block"}
-    ${close ? "hidden" : "block"}
-    `}
+		} 
+				${reduce ? "hidden" : "block"}
+    			${close ? "hidden" : "block"}`}
 				>
 					<WindowContent type={type} reduced={reduce} />
 				</div>

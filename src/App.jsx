@@ -1,11 +1,13 @@
 import { useState } from "react";
 import Window from "./components/Window";
+import Menu from "./components/Menu";
 
 function App() {
 	const [count, setCount] = useState(0);
 
 	return (
 		<div >
+			<Menu/>
 			<div className="flex flex-col justify-center items-center">
 			<Window type={"function"} />
 			<Window type={"coordonnate"} />

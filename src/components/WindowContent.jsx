@@ -29,8 +29,8 @@ const WindowContent = ({ type }) => {
 				return (
 					<>
 						<div className="shadow-[3px_2px_0px_#13505B] hover:scale-102 
-						duration-300 ease-out bg-[url(../public/ressources/photo/DSC_6335.webp)]
-						hover:bg-[url(../public/ressources/photo/DSC_6335-2.webp)]
+						duration-300 ease-out bg-[url(../public/ressources/photo/DSC_6335_1.webp)]
+						hover:bg-[url(../public/ressources/photo/DSC_6335-2_2.webp)]
 						bg-cover bg-center col-start-1 col-end-2 m-5 border-2"></div>
 						<div className="col-start-2 col-end-3 mt-5 mb-5 pl-10 border-l-3 border-dashed">
 							<div>

@@ -20,9 +20,9 @@ const data = {
             {language : "German", level : "1", flag : ""}
         ],
         social :[
-            {social : "GitHub", qrcode : "./public/ressources/QRCode/github.svg", link1 : "www.github.com", link2 : "/pedro88" },
-            {social : "Linkedin", qrcode : "./public/ressources/QRCode/linkedin.svg", link1 : "www.linkedin.com", link2 :"/in/pierre-sandre" },
-            {social : "Codewars", qrcode : "./public/ressources/QRCode/linkedin.svg", link1 : "www.codewars.com", link2 :"/users/pedro88" }
+            {social : "GitHub", qrcode : "./public/ressources/QRCode/github.png", link1 : "www.github.com", link2 : "/pedro88" },
+            {social : "Linkedin", qrcode : "./public/ressources/QRCode/linkedin.png", link1 : "www.linkedin.com", link2 :"/in/pierre-sandre" },
+            {social : "Codewars", qrcode : "./public/ressources/QRCode/codewars.png", link1 : "www.codewars.com", link2 :"/users/pedro88" }
 
         ]
     },
