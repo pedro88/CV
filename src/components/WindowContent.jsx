@@ -10,8 +10,8 @@ const WindowContent = ({ type }) => {
 			case "competences":
 				return (
 					<ul className="mt-5 mb-5">
-						{data.competences.competences.map((comp) => (
-							<li className="list" key={comp}>
+						{data.competences.competences.map((comp, index) => (
+							<li className="list" key={index}>
 								<img src={"comp.logo"} alt="" />
 								<div className="flex-row-center-full">
 
@@ -66,8 +66,8 @@ const WindowContent = ({ type }) => {
 								</h3>
 							</div>
 							<div className="flex-row-center-full mt-5 mb-5 -ml-10 ">
-								{data.coordonnate.social.map((el) => (
-									<div key={el} className="flex flex-col items-center underline relative">
+								{data.coordonnate.social.map((el, index) => (
+									<div key={index} className="flex flex-col items-center underline relative">
 									<h4>{el.social}</h4>
 									<img src={el.qrcode} alt="" className="h-[7vw] " />
 									
@@ -129,7 +129,7 @@ const WindowContent = ({ type }) => {
 					return (
 						<div
 							className={`ml-5 mr-5 border-b-3 pb-5 ${index === data.experiences.experiences.length-1 ? "border-none" : "border-dashed"}`}   
-							key={exp.date} 
+							key={index} 
 						>
 							<div className="flex-row-center-full  mt-5 mb-2">
 								<h3 className="ml-5 h2">{exp.function}</h3>
@@ -138,8 +138,8 @@ const WindowContent = ({ type }) => {
 								<h3 className="location">{exp.location}</h3>
 							<p className="mb-2 ml-5 whitespace-pre-line">{exp.description}</p>
 							<ul>
-								{exp.competences.map((item) => (
-									<li className="list" key={item}>
+								{exp.competences.map((item, index) => (
+									<li className="list" key={index}>
 										{item}
 									</li>
 								))}

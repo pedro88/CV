@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import WindowContent from "./WindowContent";
 import data from "../data/data.js";
 
-const Window = ({ type }) => {
+const Window = ({ type, handleClose }) => {
 	const [reduce, setReduce] = useState(false);
 	const [close, setClose] = useState(false);
 
@@ -11,10 +11,7 @@ const Window = ({ type }) => {
 		console.log(!reduce);
 	};
 
-	const handleClose = () => {
-		setClose((prev) => !prev);
-		console.log(!close);
-	};
+
 
 	return (
 		<>
@@ -54,6 +51,7 @@ const Window = ({ type }) => {
 							className="square"
 						>
 							<div
+								value={type}
 								onClick={handleClose}
 								className="w-[10px] h-[10px] bg-contain bg-[url(../public/ressources/icons/g1.png)] "
 							></div>

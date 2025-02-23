@@ -221,6 +221,12 @@ function App() {
 	const handleDisplayPrinter = () => {
 		setDisplayPrinter((prev) => !prev);
 	};
+
+
+	const handleClose = (e) => {
+		//setClose((prev) => !prev);
+		console.log(e.currentTarget.getAttribute("value"));
+	};
 	
 	
 	
@@ -254,7 +260,8 @@ function App() {
 						`}
 						onClick={handleIndexFunction}
 					>
-						<Window type={"function"} />
+						<Window type={"function"}
+						handleClose={handleDisplayFunction}/>
 					</div>
 				</Draggable>
 				<Draggable
@@ -270,7 +277,8 @@ function App() {
 						`}
 						onClick={handleIndexProfile}
 					>
-						<Window type={"coordonnate"} />
+						<Window type={"coordonnate"}
+						handleClose={handleDisplayProfile} />
 					</div>
 				</Draggable>
 				<Draggable
@@ -286,7 +294,8 @@ function App() {
 						`}
 						onClick={handleIndexExperience}
 					>
-						<Window type={"experiences"} />
+						<Window type={"experiences"}
+						handleClose={handleDisplayExperience} />
 					</div>
 				</Draggable>
 				<Draggable
@@ -302,7 +311,8 @@ function App() {
 						`}
 						onClick={handleIndexFormation}
 					>
-						<Window type={"formations"} />
+						<Window type={"formations"}
+						handleClose={handleDisplayFormation} />
 					</div>
 				</Draggable>
 				<Draggable
@@ -318,7 +328,8 @@ function App() {
 						`}
 						onClick={handleIndexSkill}
 					>
-						<Window type={"competences"} />
+						<Window type={"competences"}
+						handleClose={handleDisplaySkill} />
 					</div>
 				</Draggable>
 			</div>
