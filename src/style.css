@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .list {
-    @apply list-disc ml-10;
+    @apply list-disc ml-15;
 }
 
 .flex-row-center-full {
@@ -22,7 +22,7 @@
 }
 
 .date {
-   @apply text-base italic mr-5;
+   @apply text-base italic ml-60 mr-5;
 }
 
 .location {

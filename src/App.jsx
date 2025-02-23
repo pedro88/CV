@@ -2,13 +2,15 @@ import { useState } from "react";
 import Window from "./components/Window";
 import Menu from "./components/Menu";
 import Draggable from "react-draggable";
+import html2canvas from "html2canvas";
+import {jsPDF} from 'jspdf'
+import React from "react";
+import domtoimage from 'dom-to-image';
+import WindowShadow from "./components/WindowShadow";
 
 function App() {
-	const [count, setCount] = useState(0);
-	const [displayPDF, setDisplayPDF] = useState(true);
-	const [displayPrinter, setDisplayPrinter] = useState(true);
-	const [displayWrite, setDisplayWrite] = useState(true);
 	const gridSize = 50
+	const printRef = React.useRef()
 	
 	
 	//EXPERIENCE
@@ -35,7 +37,6 @@ function App() {
 			indexExperience <= indexProfile ||
 			indexExperience <= indexSkill
 		  ) {
-			// Incrémenter l'index de "Experience" jusqu'à ce qu'il soit supérieur à tous les autres
 			setIndexExperience((prev) => {
 			  let newIndex = prev + 10;
 			  while (
@@ -74,7 +75,6 @@ function App() {
 			indexFormation <= indexProfile ||
 			indexFormation <= indexSkill
 		  ) {
-			// Incrémenter l'index de "Experience" jusqu'à ce qu'il soit supérieur à tous les autres
 			setIndexFormation((prev) => {
 			  let newIndex = prev + 10;
 			  while (
@@ -113,7 +113,6 @@ function App() {
 			indexFunction <= indexProfile ||
 			indexFunction <= indexSkill
 		  ) {
-			// Incrémenter l'index de "Experience" jusqu'à ce qu'il soit supérieur à tous les autres
 			setIndexFunction((prev) => {
 			  let newIndex = prev + 10;
 			  while (
@@ -152,7 +151,6 @@ function App() {
 			indexProfile <= indexExperience ||
 			indexProfile <= indexSkill
 		  ) {
-			// Incrémenter l'index de "Experience" jusqu'à ce qu'il soit supérieur à tous les autres
 			setIndexProfile((prev) => {
 			  let newIndex = prev + 10;
 			  while (
@@ -191,7 +189,6 @@ function App() {
 			indexSkill <= indexProfile ||
 			indexSkill <= indexExperience
 		  ) {
-			// Incrémenter l'index de "Experience" jusqu'à ce qu'il soit supérieur à tous les autres
 			setIndexSkill((prev) => {
 			  let newIndex = prev + 10;
 			  while (
@@ -213,9 +210,20 @@ function App() {
 	};
 	
 	//PDF
-	const handleDisplayPDF = () => {
-		setDisplayPDF((prev) => !prev);
-	};
+	const handleDisplayPDF = async () => {
+		const element = printRef.current;
+		const canvas = await html2canvas(element);
+		const data = canvas.toDataURL('image/png');
+	  
+		const pdf = new jsPDF('p', 'mm', 'a4'); 
+		const imgProperties = pdf.getImageProperties(data);
+		const pdfWidth = pdf.internal.pageSize.getWidth() - 20; 
+		const pdfHeight = (imgProperties.height * pdfWidth) / imgProperties.width;
+	  
+		const offsetX = (pdf.internal.pageSize.getWidth() - pdfWidth) / 2; 
+		pdf.addImage(data, 'PNG', offsetX, 10, pdfWidth, pdfHeight);
+		pdf.save('print.pdf');
+	  };
 	
 	//PRINTER
 	const handleDisplayPrinter = () => {
@@ -223,10 +231,6 @@ function App() {
 	};
 
 
-	const handleClose = (e) => {
-		//setClose((prev) => !prev);
-		console.log(e.currentTarget.getAttribute("value"));
-	};
 	
 	
 	
@@ -246,7 +250,7 @@ function App() {
 				/>
 			</div>
 
-			<div className="ml-35 mr-10 mt-10 grid grid-cols-(repeat(auto-fill, 100px)) gap-5 grid-rows-(repeat(auto-fill, 100px))">
+			<div ref={printRef} className="ml-35 mr-10 mt-10 grid grid-cols-(repeat(auto-fill, 100px)) gap-20 grid-rows-(repeat(auto-fill, 100px))">
 				<Draggable
 				position={positionFunction}
 				onStop={handleDragFunction}
@@ -274,7 +278,7 @@ function App() {
 						className={`${
 							displayProfile ? "block" : "hidden"
 						} col-start-1 col-end-3 row-start-2 row-end-3
-						`}
+						relative`}
 						onClick={handleIndexProfile}
 					>
 						<Window type={"coordonnate"}

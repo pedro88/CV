@@ -85,7 +85,7 @@ const WindowContent = ({ type }) => {
 								<ul>
 									{data.coordonnate.interest.map(
 										(item, index) => (
-											<li key={index} className="list-disc" >
+											<li key={index} className="list-disc ml-5" >
 												<img
 													src={
 														data.coordonnate
@@ -108,7 +108,7 @@ const WindowContent = ({ type }) => {
 								<ul>
 									{data.coordonnate.language.map(
 										(item, index) => (
-											<li key={index} className="list-disc">
+											<li key={index} className="list-disc ml-5">
 												{item.flag} 
 												<div className="flex-row-center-full">
 												{item.language} :{" "}
@@ -163,7 +163,7 @@ const WindowContent = ({ type }) => {
 							<p className="mb-2 location">{form.location}</p>
 							<ul>
 								{form.competences.map((item) => (
-									<li className="list" key={item}>
+									<li className="list-disc ml-10" key={item}>
 										{item}
 									</li>
 								))}
