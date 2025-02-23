@@ -21,7 +21,7 @@ const Window = ({ type }) => {
 			{/* <div className='display'> */}
 
 			<div
-				className={`border-solid border-3 shadow-[10px_8px_0px_#13505B]  
+				className={`border-solid border-3 shadow-[10px_8px_0px_#13505B] bg-white  
       	${close ? "hidden" : "block"}`}
 			>
 				{/* <div className='window'>  */}
