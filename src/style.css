@@ -1,107 +1,51 @@
-@import "tailwindcss"
+@import "tailwindcss";
 
-
-/* .display {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-
-}
-.window {
-    border-style: solid;
-    border-color: black;
-    border-width: 3px;
-    width: 80vw;
-    display: grid;
-    grid-template-columns: 30% 35% 35%;
-    grid-template-rows: auto auto;
-    box-shadow: 10px 8px #13505B;
-    margin: 20px;
-
-
-}
-.window-name {
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
-    border: none;
-    border-bottom: solid;
-    background-color: #119DA4;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    grid-column: 1/4; 
-    grid-row: auto;   
-}
-.column-1 {
-    grid-column: 1/2;
-    background-image: url("../public/ressources/photo/DSC_6335.webp");
-    background-size: cover;
-    background-position: 50%;
-}
-.column-2 {
-    grid-column: 2/3;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-left: 20px;
-}
-.column-3 {
-    grid-column: 3/4;
-    border-style: dashed;
-    border-bottom: none;
-    border-right: none;
-    border-top: none;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-left: 20px;
-}
-.coordonnate-item {
-    display: flex;
-}
-.btn-container {
-    display: flex;
-    flex-direction: row;
-    margin-right: 20px;
-}
-.icon {
-    width: 20px;
-    height: 20px;
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
-    margin: 3px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.close {
-    background-image: url("../public/ressources/icons/g1.png" );
-    width: 15px;
-    height: 15px;
-    background-size: contain;
-}
-.reduce {
-    background-image: url("../public/ressources/icons/g1.png" );
-    width: 15px;
-    height: 15px;
-    background-size: contain;
-
+.list {
+    @apply list-disc ml-10;
 }
 
-.name {
-    margin-left: 20px;
+.flex-row-center-full {
+    @apply flex flex-row justify-between items-center;
 }
 
+.level-cursor {
+    @apply appearance-none h-2 border-2  mr-5 accent-[#119DA4] rounded-none 
+    shadow-[3px_2px_0px_#13505B] bg-white hover:scale-105 duration-100 ease-out
+}
 
+.h2 {
+    @apply underline font-medium text-lg;
+}
 
+.h3{
+    @apply underline font-medium;
+}
 
+.date {
+   @apply text-base italic mr-5;
+}
 
-h3 {
-    margin : 0;
-    margin: 3px;
-} */
+.location {
+    @apply text-lg ml-5 italic
+}
+
+.profile {
+    @apply shadow-[3px_2px_0px_#13505B] hover:scale-102 
+    duration-300 ease-out bg-[url(../public/ressources/photo/DSC_6335_1.webp)]
+    hover:bg-[url(../public/ressources/photo/DSC_6335-2_2.webp)]
+    bg-cover bg-center col-start-1 col-end-2 m-5 border-2
+}
+
+.square {
+    @apply w-[20px] h-[20px] border-solid border-2 m-1 
+    flex flex-row justify-center items-center hover:scale-110
+     bg-white shadow-[3px_3px_0px_#13505B] duration-100 ease-out
+}
+
+.title {
+    @apply ml-5 pt-5 pb-5 text-xl font-bold
+}
+
+.function {
+    @apply ml-5 text-xl pt-5 pb-5 font-bold
+}

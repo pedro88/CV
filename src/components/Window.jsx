@@ -33,19 +33,17 @@ const Window = ({ type }) => {
 					{/* <div className='window-name'> */}
 
 					{type === "function" ? (
-						<h1 className="ml-5 text-xl pt-5 pb-5 font-bold">
+						<h1 className="function">
 							{data.function}
 						</h1>
 					) : (
-						<h2 className="ml-5 pt-5 pb-5 text-xl font-bold ">
+						<h2 className="title">
 							{type.toUpperCase()}
 						</h2>
 					)}
 					<div className={`flex flex-row mr-5`}>
 						<div
-							className="w-[20px] h-[20px] border-solid border-2 m-1 
-            flex flex-row justify-center items-center hover:scale-110
-             bg-white shadow-[3px_3px_0px_#13505B] duration-100 ease-out"
+							className="square"
 						>
 							<div
 								onClick={handleReduce}
@@ -53,9 +51,7 @@ const Window = ({ type }) => {
 							></div>
 						</div>
 						<div
-							className="w-[20px] h-[20px] border-solid border-2 m-1 
-            flex flex-row justify-center items-center hover:scale-110
-             bg-white shadow-[3px_3px_0px_#13505B] duration-100 ease-out"
+							className="square"
 						>
 							<div
 								onClick={handleClose}
