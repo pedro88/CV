@@ -21,19 +21,13 @@ const Window = ({ type }) => {
 			{/* <div className='display'> */}
 
 			<div
-				className={`border-solid border-3 shadow-[10px_8px_0px_#13505B] m-5  
+				className={`border-solid border-3 shadow-[10px_8px_0px_#13505B]  
       	${close ? "hidden" : "block"}`}
 			>
 				{/* <div className='window'>  */}
 				<div
 					className={`border-solid border-b-3 bg-[#119DA4] flex 
-            flex-row justify-between items-center col-start-1 col-end-4 ${
-				type === "experiences" ||
-				type === "formations" ||
-				type === "competences"
-					? "w-[38vw]"
-					: "w-[80vw]"
-			}
+            flex-row justify-between items-center
     			${close ? "hidden" : "block"}`}
 				>
 					{/* <div className='window-name'> */}
@@ -44,7 +38,7 @@ const Window = ({ type }) => {
 						</h1>
 					) : (
 						<h2 className="ml-5 pt-5 pb-5 text-xl font-bold ">
-							{type}
+							{type.toUpperCase()}
 						</h2>
 					)}
 					<div className={`flex flex-row mr-5`}>
@@ -78,8 +72,8 @@ const Window = ({ type }) => {
 			type === "experiences" ||
 			type === "formations" ||
 			type === "competences"
-				? "w-[38vw]"
-				: "w-[80vw] grid grid-rows-[auto auto] grid-cols-3"
+				? "w-[100%]"
+				: "w-[100%] grid grid-rows-[auto auto] grid-cols-3"
 		} 
 				${reduce ? "hidden" : "block"}
     			${close ? "hidden" : "block"}`}

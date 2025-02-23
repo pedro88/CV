@@ -73,7 +73,7 @@ const WindowContent = ({ type }) => {
 								{data.coordonnate.social.map((el) => (
 									<div key={el} className="flex flex-col items-center underline relative">
 									<h4>{el.social}</h4>
-									<img src={el.qrcode} alt="" className="h-30 " />
+									<img src={el.qrcode} alt="" className="h-[7vw] " />
 									
 									{/* <p className=" absolute -bottom-7" >{el.link2}</p>
 									<p className=" absolute -bottom-3" >{el.link1}</p> */}

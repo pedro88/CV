@@ -8,7 +8,7 @@ const Menu = ({ handleDisplayExperience, handleDisplayFormation, handleDisplayFu
     }
   return (
     <>
-    <div className='absolute h-20 ml-10 mt-5'>
+    <div className='absolute h-10 ml-10'>
         <div onClick={handleMenu} className="hover:scale-102 duration-100 ease-out">
 
         <img className=' h-10' src="./menu-half-border.png" alt=""/>
