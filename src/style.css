@@ -9,12 +9,12 @@
 }
 
 .level-cursor {
-    @apply appearance-none h-2 border-2  mr-5 accent-[#119DA4] rounded-none 
+    @apply appearance-none h-2 border-2  mr-10 accent-[#119DA4] rounded-none 
     shadow-[3px_2px_0px_#13505B] bg-white hover:scale-105 duration-100 ease-out
 }
 
 .h2 {
-    @apply underline font-medium text-lg;
+    @apply underline font-medium text-lg mb-5;
 }
 
 .h3{
@@ -39,11 +39,11 @@
 .square {
     @apply w-[20px] h-[20px] border-solid border-2 m-1 
     flex flex-row justify-center items-center hover:scale-110
-     bg-white shadow-[3px_3px_0px_#13505B] duration-100 ease-out
+     bg-white duration-100 ease-out
 }
 
 .title {
-    @apply ml-5 pt-5 pb-5 text-xl font-bold
+    @apply ml-5 mt-5 mb-5 text-xl font-bold
 }
 
 .function {

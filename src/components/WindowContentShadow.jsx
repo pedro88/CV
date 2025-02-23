@@ -1,13 +1,13 @@
 import React from "react";
 import data from "../data/data.js";
 
-const WindowContent = ({ type }) => {
+const WindowContentShadow = ({ type }) => {
 
 
 
 	const windowType = () => {
 		switch (type) {
-
+			
 			case "competences":
 				return (
 					<ul className="mt-5 mb-5">
@@ -179,9 +179,7 @@ const WindowContent = ({ type }) => {
 	};
 
 
-	return <>
-	{windowType({ type })}
-	</>;
+	return <>{windowType({ type })}</>;
 };
 
-export default WindowContent;
+export default WindowContentShadow;

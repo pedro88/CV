@@ -9,7 +9,8 @@ const Menu = ({ handleDisplayExperience, handleDisplayFormation, handleDisplayFu
   return (
     <>
     <div className='absolute h-10 ml-10'>
-        <div onClick={handleMenu} className="hover:scale-102 duration-300 ease-out hover:rotate-180">
+        <div onClick={handleMenu} 
+        className={`hover:scale-102 duration-300 ease-out hover:rotate-180}`}>
 
         <img className=' h-10' src="./menu-half-border.png" alt=""/>
         <img className={` h-10 mt-0.5 ${menu ? "hidden" : "block"}`} src="./menu-half-border.png" alt=""/>

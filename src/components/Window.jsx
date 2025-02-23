@@ -2,14 +2,11 @@ import React, { useState } from "react";
 import WindowContent from "./WindowContent";
 import data from "../data/data.js";
 
-const Window = ({ type, handleClose }) => {
-	const [reduce, setReduce] = useState(false);
+const Window = ({ type, handleClose, handleReduce, reduce }) => {
+
 	const [close, setClose] = useState(false);
 
-	const handleReduce = () => {
-		setReduce((prev) => !prev);
-		console.log(!reduce);
-	};
+
 
 
 
@@ -18,13 +15,12 @@ const Window = ({ type, handleClose }) => {
 			{/* <div className='display'> */}
 
 			<div
-				className={`border-solid border-3 shadow-[10px_8px_0px_#13505B] bg-white  
+				className={`border-solid border-3 bg-white  
       	${close ? "hidden" : "block"}`}
 			>
 				{/* <div className='window'>  */}
 				<div
-					className={`border-solid border-b-3 bg-[#119DA4] flex 
-            flex-row justify-between items-center
+					className={`border-solid border-b-3 bg-[#119DA4] flex-row-center-full
     			${close ? "hidden" : "block"}`}
 				>
 					{/* <div className='window-name'> */}
@@ -46,6 +42,7 @@ const Window = ({ type, handleClose }) => {
 								onClick={handleReduce}
 								className="w-[10px] h-[10px] bg-contain bg-[url(../public/ressources/icons/g2.png)] "
 							></div>
+
 						</div>
 						<div
 							className="square"

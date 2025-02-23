@@ -1,29 +1,21 @@
 import React, { useState } from "react";
-import WindowContent from "./WindowContent.jsx";
+import WindowContentShadow from "./WindowContentShadow.jsx";
 import data from "../data/data.js";
 
-const WindowShadow = ({ type, handleClose }) => {
-	const [reduce, setReduce] = useState(false);
+const WindowShadow = ({ type, handleClose,  handleReduce, reduce }) => {
+
 	const [close, setClose] = useState(false);
-
-	const handleReduce = () => {
-		setReduce((prev) => !prev);
-		console.log(!reduce);
-	};
-
-
-
 	return (
 		<>
 			{/* <div className='display'> */}
 
 			<div
-				className={`border-solid border-3 shadow-[10px_8px_0px_#13505B] bg-white  
+				className={`border-solid border-3 bg-[#13505B]  
       	${close ? "hidden" : "block"}`}
 			>
 				{/* <div className='window'>  */}
 				<div
-					className={`border-solid border-b-3 bg-[#119DA4] flex 
+					className={`border-solid border-b-0 bg-[#13505B] flex 
             flex-row justify-between items-center
     			${close ? "hidden" : "block"}`}
 				>
@@ -72,7 +64,7 @@ const WindowShadow = ({ type, handleClose }) => {
 				${reduce ? "hidden" : "block"}
     			${close ? "hidden" : "block"}`}
 				>
-					<WindowContent type={type} reduced={reduce} />
+					<WindowContentShadow type={type} reduced={reduce} />
 				</div>
 			</div>
 		</>

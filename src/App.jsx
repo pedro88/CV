@@ -3,28 +3,28 @@ import Window from "./components/Window";
 import Menu from "./components/Menu";
 import Draggable from "react-draggable";
 import html2canvas from "html2canvas";
-import {jsPDF} from 'jspdf'
+import { jsPDF } from "jspdf";
 import React from "react";
-import domtoimage from 'dom-to-image';
 import WindowShadow from "./components/WindowShadow";
 
 function App() {
-	const gridSize = 50
-	const printRef = React.useRef()
-	
+	const gridSize = 50;
+	const printRef = React.useRef();
 	
 	//EXPERIENCE
 	const [displayExperience, setDisplayExperience] = useState(true);
-	const [indexExperience, setIndexExperience] = useState(10)
-	const [positionExperience, setPositionExperience] = useState({ x : 0, y : 0})
+	const [indexExperience, setIndexExperience] = useState(10);
+	const [positionExperience, setPositionExperience] = useState({
+		x: 0,
+		y: 0,
+	});
 	const handleDisplayExperience = () => {
 		setDisplayExperience((prev) => !prev);
 	};
-	const snapToGridExperience = (x, y) => {		
+	const snapToGridExperience = (x, y) => {
 		const snappedX = Math.round(x / gridSize) * gridSize;
 		const snappedY = Math.round(y / gridSize) * gridSize;
 		return { x: snappedX, y: snappedY };
-
 	};
 	const handleDragExperience = (e, data) => {
 		const { x, y } = snapToGridExperience(data.x, data.y);
@@ -36,26 +36,30 @@ function App() {
 			indexExperience <= indexFunction ||
 			indexExperience <= indexProfile ||
 			indexExperience <= indexSkill
-		  ) {
+		) {
 			setIndexExperience((prev) => {
-			  let newIndex = prev + 10;
-			  while (
-				newIndex <= indexFormation ||
-				newIndex <= indexFunction ||
-				newIndex <= indexProfile ||
-				newIndex <= indexSkill
-			  ) {
-				newIndex++;
-			  }
-			  return newIndex;
+				let newIndex = prev + 10;
+				while (
+					newIndex <= indexFormation ||
+					newIndex <= indexFunction ||
+					newIndex <= indexProfile ||
+					newIndex <= indexSkill
+				) {
+					newIndex++;
+				}
+				return newIndex;
 			});
-		  }
-	}
+		}
+	};
+	const [reduceExperience, setReduceExperience] = useState(false);
+	const handleReduceExperience = () => {
+		setReduceExperience((prev) => !prev);
+	};
 	
 	//FORMATION
 	const [displayFormation, setDisplayFormation] = useState(true);
-	const [indexFormation, setIndexFormation] = useState(10)
-	const [positionFormation, setPositionFormation] = useState({ x : 0, y : 0})
+	const [indexFormation, setIndexFormation] = useState(10);
+	const [positionFormation, setPositionFormation] = useState({ x: 0, y: 0 });
 	const handleDisplayFormation = () => {
 		setDisplayFormation((prev) => !prev);
 	};
@@ -74,26 +78,30 @@ function App() {
 			indexFormation <= indexFunction ||
 			indexFormation <= indexProfile ||
 			indexFormation <= indexSkill
-		  ) {
+		) {
 			setIndexFormation((prev) => {
-			  let newIndex = prev + 10;
-			  while (
-				newIndex <= indexExperience ||
-				newIndex <= indexFunction ||
-				newIndex <= indexProfile ||
-				newIndex <= indexSkill
-			  ) {
-				newIndex++;
-			  }
-			  return newIndex;
+				let newIndex = prev + 10;
+				while (
+					newIndex <= indexExperience ||
+					newIndex <= indexFunction ||
+					newIndex <= indexProfile ||
+					newIndex <= indexSkill
+				) {
+					newIndex++;
+				}
+				return newIndex;
 			});
-		  }
-	}
+		}
+	};
+	const [reduceFormation, setReduceFormation] = useState(false);
+	const handleReduceFormation = () => {
+		setReduceFormation((prev) => !prev);
+	};
 	
 	//FUNCTION
 	const [displayFunction, setDisplayFunction] = useState(true);
-	const [indexFunction, setIndexFunction] = useState(10)
-	const [positionFunction, setPositionFunction] = useState({ x : 0, y : 0})
+	const [indexFunction, setIndexFunction] = useState(10);
+	const [positionFunction, setPositionFunction] = useState({ x: 0, y: 0 });
 	const handleDisplayFunction = () => {
 		setDisplayFunction((prev) => !prev);
 	};
@@ -112,26 +120,26 @@ function App() {
 			indexFunction <= indexExperience ||
 			indexFunction <= indexProfile ||
 			indexFunction <= indexSkill
-		  ) {
+		) {
 			setIndexFunction((prev) => {
-			  let newIndex = prev + 10;
-			  while (
-				newIndex <= indexFormation ||
-				newIndex <= indexExperience ||
-				newIndex <= indexProfile ||
-				newIndex <= indexSkill
-			  ) {
-				newIndex++;
-			  }
-			  return newIndex;
+				let newIndex = prev + 10;
+				while (
+					newIndex <= indexFormation ||
+					newIndex <= indexExperience ||
+					newIndex <= indexProfile ||
+					newIndex <= indexSkill
+				) {
+					newIndex++;
+				}
+				return newIndex;
 			});
-		  }
-	}
+		}
+	};
 	
 	//PROFILE
 	const [displayProfile, setDisplayProfile] = useState(true);
-	const [indexProfile, setIndexProfile] = useState(10)
-	const [positionProfile, setPositionProfile] = useState({ x : 0, y : 0})
+	const [indexProfile, setIndexProfile] = useState(10);
+	const [positionProfile, setPositionProfile] = useState({ x: 0, y: 0 });
 	const handleDisplayProfile = () => {
 		setDisplayProfile((prev) => !prev);
 	};
@@ -150,29 +158,33 @@ function App() {
 			indexProfile <= indexFunction ||
 			indexProfile <= indexExperience ||
 			indexProfile <= indexSkill
-		  ) {
+		) {
 			setIndexProfile((prev) => {
-			  let newIndex = prev + 10;
-			  while (
-				newIndex <= indexFormation ||
-				newIndex <= indexFunction ||
-				newIndex <= indexExperience ||
-				newIndex <= indexSkill
-			  ) {
-				newIndex++;
-			  }
-			  return newIndex;
+				let newIndex = prev + 10;
+				while (
+					newIndex <= indexFormation ||
+					newIndex <= indexFunction ||
+					newIndex <= indexExperience ||
+					newIndex <= indexSkill
+				) {
+					newIndex++;
+				}
+				return newIndex;
 			});
-		  }
-	}
-	
+		}
+	};	
+	const [reduceProfile, setReduceProfile] = useState(false);
+	const handleReduceProfile = () => {
+		setReduceProfile((prev) => !prev);
+	};
 	//SKILL
 	const [displaySkill, setDisplaySkill] = useState(true);
-	const [indexSkill, setIndexSkill] = useState(10)
-	const [positionSkill, setPositionSkill] = useState({ x : 0, y : 0})
+	const [indexSkill, setIndexSkill] = useState(10);
+	const [positionSkill, setPositionSkill] = useState({ x: 0, y: 0 });
 	const handleDisplaySkill = () => {
 		setDisplaySkill((prev) => !prev);
 	};
+	
 	const snapToGridSkill = (x, y) => {
 		const snappedX = Math.round(x / gridSize) * gridSize;
 		const snappedY = Math.round(y / gridSize) * gridSize;
@@ -182,58 +194,60 @@ function App() {
 		const { x, y } = snapToGridSkill(data.x, data.y);
 		setPositionSkill({ x, y });
 	};
+	
 	const handleIndexSkill = () => {
 		if (
 			indexSkill <= indexFormation ||
 			indexSkill <= indexFunction ||
 			indexSkill <= indexProfile ||
 			indexSkill <= indexExperience
-		  ) {
+		) {
 			setIndexSkill((prev) => {
-			  let newIndex = prev + 10;
-			  while (
-				newIndex <= indexFormation ||
-				newIndex <= indexFunction ||
-				newIndex <= indexProfile ||
-				newIndex <= indexExperience
-			  ) {
-				newIndex++;
-			  }
-			  return newIndex;
+				let newIndex = prev + 10;
+				while (
+					newIndex <= indexFormation ||
+					newIndex <= indexFunction ||
+					newIndex <= indexProfile ||
+					newIndex <= indexExperience
+				) {
+					newIndex++;
+				}
+				return newIndex;
 			});
-		  }
-	}
-	
-	//WRITE
-	const handleDisplayWrite = () => {
-		setDisplayWrite((prev) => !prev);
+		}
+	};
+	const [reduceSkill, setReduceSkill] = useState(false);
+	const handleReduceSkill = () => {
+		setReduceSkill((prev) => !prev);
 	};
 	
 	//PDF
 	const handleDisplayPDF = async () => {
 		const element = printRef.current;
 		const canvas = await html2canvas(element);
-		const data = canvas.toDataURL('image/png');
-	  
-		const pdf = new jsPDF('p', 'mm', 'a4'); 
+		const data = canvas.toDataURL("image/png");
+		
+		const pdf = new jsPDF("p", "mm", "a4");
 		const imgProperties = pdf.getImageProperties(data);
-		const pdfWidth = pdf.internal.pageSize.getWidth() - 20; 
-		const pdfHeight = (imgProperties.height * pdfWidth) / imgProperties.width;
-	  
-		const offsetX = (pdf.internal.pageSize.getWidth() - pdfWidth) / 2; 
-		pdf.addImage(data, 'PNG', offsetX, 10, pdfWidth, pdfHeight);
-		pdf.save('print.pdf');
-	  };
+		const pdfWidth = pdf.internal.pageSize.getWidth() - 20;
+		const pdfHeight =
+		(imgProperties.height * pdfWidth) / imgProperties.width;
+		
+		const offsetX = (pdf.internal.pageSize.getWidth() - pdfWidth) / 2;
+		pdf.addImage(data, "PNG", offsetX, 10, pdfWidth, pdfHeight);
+		pdf.save("print.pdf");
+	};
 	
 	//PRINTER
 	const handleDisplayPrinter = () => {
 		setDisplayPrinter((prev) => !prev);
 	};
-
-
 	
 	
-	
+	//WRITE
+	const handleDisplayWrite = () => {
+		setDisplayWrite((prev) => !prev);
+	};
 	
 	return (
 		<>
@@ -250,90 +264,181 @@ function App() {
 				/>
 			</div>
 
-			<div ref={printRef} className="ml-35 mr-10 mt-10 grid grid-cols-(repeat(auto-fill, 100px)) gap-20 grid-rows-(repeat(auto-fill, 100px))">
+			<div
+				ref={printRef}
+				className="ml-35 mr-10 mt-10 mb-10 p-3 grid grid-cols-2 gap-5"
+			>
 				<Draggable
-				position={positionFunction}
-				onStop={handleDragFunction}
-				grid={[gridSize, gridSize]}
+					position={positionFunction}
+					onStop={handleDragFunction}
+					grid={[gridSize, gridSize]}
 				>
 					<div
-					style={{zIndex: indexFunction}}
-						className={`${
-							displayFunction ? "block" : "hidden"
-						} col-start-1 col-end-3 row-start-1 row-end-2
-						`}
-						onClick={handleIndexFunction}
+						style={{ zIndex: indexFunction }}
+						className="relative col-span-2 row-span-1 w-full min-w-0 "
 					>
-						<Window type={"function"}
-						handleClose={handleDisplayFunction}/>
+						<div
+							className={` absolute w-full min-w-0 top-3 left-3 -z-10 ${
+								displayFunction ? "block" : "hidden"
+							}`}
+						>
+							<WindowShadow type={"function"}></WindowShadow>
+						</div>
+
+						<div
+							className={` ${
+								displayFunction ? "block" : "hidden"
+							}`}
+							onClick={handleIndexFunction}
+						>
+							<Window
+								type={"function"}
+								handleClose={handleDisplayFunction}
+							/>
+						</div>
 					</div>
 				</Draggable>
 				<Draggable
-				position={positionProfile}
-				onStop={handleDragProfile}
-				grid={[gridSize, gridSize]}
+					position={positionProfile}
+					onStop={handleDragProfile}
+					grid={[gridSize, gridSize]}
 				>
 					<div
-					style={{zIndex: indexProfile}}
-						className={`${
-							displayProfile ? "block" : "hidden"
-						} col-start-1 col-end-3 row-start-2 row-end-3
-						relative`}
-						onClick={handleIndexProfile}
+						style={{ zIndex: indexProfile }}
+						className="relative col-span-2 row-span-1 w-full min-w-0"
 					>
-						<Window type={"coordonnate"}
-						handleClose={handleDisplayProfile} />
+						<div
+							className={` absolute w-full min-w-0 top-3 left-3 -z-10 ${
+								displayProfile ? "block" : "hidden"
+							}`}
+						>
+							<WindowShadow
+								type={"coordonnate"}
+								handleReduce={handleReduceProfile}
+								reduce={reduceProfile}
+							></WindowShadow>
+						</div>
+
+						<div
+							className={` ${displayProfile ? "block" : "hidden"} 
+					`}
+							onClick={handleIndexProfile}
+						>
+							<Window
+								type={"coordonnate"}
+								handleClose={handleDisplayProfile}
+								handleReduce={handleReduceProfile}
+								reduce={reduceProfile}
+							/>
+						</div>
 					</div>
 				</Draggable>
 				<Draggable
-				position={positionExperience}
-				onStop={handleDragExperience}
-				grid={[gridSize, gridSize]}
+					position={positionExperience}
+					onStop={handleDragExperience}
+					grid={[gridSize, gridSize]}
 				>
 					<div
-						style={{zIndex: indexExperience}}
-						className={`${
-							displayExperience ? "block" : "hidden"
-						} col-start-1 col-end-2 row-start-3 row-end-6
-						`}
-						onClick={handleIndexExperience}
+						style={{ zIndex: indexExperience }}
+						className="relative col-span-1 row-span-3 w-full min-w-0"
 					>
-						<Window type={"experiences"}
-						handleClose={handleDisplayExperience} />
+						<div
+							className={` absolute w-full min-w-0 top-3 left-3 -z-10 ${
+								displayExperience ? "block" : "hidden"
+							}`}
+						>
+							<WindowShadow
+								type={"experiences"}
+								handleReduce={handleReduceExperience}
+								reduce={reduceExperience}
+							></WindowShadow>
+						</div>
+
+						<div
+							className={` ${
+								displayExperience ? "block" : "hidden"
+							} 
+					`}
+							onClick={handleIndexExperience}
+						>
+							<Window
+								type={"experiences"}
+								handleClose={handleDisplayExperience}
+								handleReduce={handleReduceExperience}
+								reduce={reduceExperience}
+							/>
+						</div>
 					</div>
 				</Draggable>
 				<Draggable
-				position={positionFormation}
-				onStop={handleDragFormation}
-				grid={[gridSize, gridSize]}
+					position={positionFormation}
+					onStop={handleDragFormation}
+					grid={[gridSize, gridSize]}
 				>
 					<div
-					style={{zIndex: indexFormation}}
-						className={`${
-							displayFormation ? "block" : "hidden"
-						} col-start-2 col-end-3 row-start-3 row-end-4
-						`}
-						onClick={handleIndexFormation}
+						style={{ zIndex: indexFormation }}
+						className="relative col-span-1 row-span-1 w-full min-w-0"
 					>
-						<Window type={"formations"}
-						handleClose={handleDisplayFormation} />
+						<div
+							className={` absolute w-full min-w-0 top-3 left-3 -z-10 ${
+								displayFormation ? "block" : "hidden"
+							}`}
+						>
+							<WindowShadow
+								type={"formations"}
+								handleReduce={handleReduceFormation}
+								reduce={reduceFormation}
+							></WindowShadow>
+						</div>
+						<div
+							className={` ${
+								displayFormation ? "block" : "hidden"
+							} 
+					`}
+							onClick={handleIndexFormation}
+						>
+							<Window
+								type={"formations"}
+								handleClose={handleDisplayFormation}
+								handleReduce={handleReduceFormation}
+								reduce={reduceFormation}
+							/>
+						</div>
 					</div>
 				</Draggable>
 				<Draggable
-				position={positionSkill}
-				onStop={handleDragSkill}
-				grid={[gridSize, gridSize]}
+					position={positionSkill}
+					onStop={handleDragSkill}
+					grid={[gridSize, gridSize]}
 				>
 					<div
-					style={{zIndex: indexSkill}}
-						className={`${
-							displaySkill ? "block" : "hidden"
-						} col-start-2 col-end-3 row-start-4 row-end-5
-						`}
-						onClick={handleIndexSkill}
+						style={{ zIndex: indexSkill }}
+						className="relative col-span-1 row-span-1 w-full min-w-0"
 					>
-						<Window type={"competences"}
-						handleClose={handleDisplaySkill} />
+						<div
+							className={` absolute w-full min-w-0 top-3 left-3 -z-10 ${
+								displaySkill ? "block" : "hidden"
+							}`}
+						>
+							<WindowShadow
+								type={"competences"}
+								handleReduce={handleReduceSkill}
+								reduce={reduceSkill}
+							></WindowShadow>
+						</div>
+
+						<div
+							className={` ${displaySkill ? "block" : "hidden"} 
+					`}
+							onClick={handleIndexSkill}
+						>
+							<Window
+								type={"competences"}
+								handleClose={handleDisplaySkill}
+								handleReduce={handleReduceSkill}
+								reduce={reduceSkill}
+							/>
+						</div>
 					</div>
 				</Draggable>
 			</div>

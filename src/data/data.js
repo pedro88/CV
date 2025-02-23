@@ -27,7 +27,7 @@ const data = {
         ]
     },
     experiences :{
-        experiences :[
+       fr :[
             {
                 function : "Animateur-Coordinateur",
                 location : "Maison de Jeunes de Vielsalm ",
@@ -60,7 +60,7 @@ const data = {
 
     },
     formations :{
-        formations : [
+        fr : [
             {
                 title : "Junior Developper",
                 location :"BeCode - Liège",
@@ -89,7 +89,7 @@ const data = {
 
     },
     competences : {
-        competences :[
+        fr :[
             {skill : "JS/React" , level : "4", logo: ""},
             {skill : "Node.js/Express" , level : "4", logo: ""},
             {skill : "PHP/Laravel" , level : "3", logo: ""},
