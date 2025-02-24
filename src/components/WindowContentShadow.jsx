@@ -22,6 +22,7 @@ const WindowContentShadow = ({ type }) => {
 								</div>
 							</li>
 						))}
+
 					</ul>
 				);
 
@@ -122,6 +123,7 @@ const WindowContentShadow = ({ type }) => {
 									)}
 								</ul>
 							</div>
+
 						</div>
 					</>
 				);
@@ -146,6 +148,7 @@ const WindowContentShadow = ({ type }) => {
 									</li>
 								))}
 							</ul>
+
 						</div>
 					);
 				});

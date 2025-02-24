@@ -16,9 +16,15 @@ const WindowContent = ({ type }) => {
 								<img src={"comp.logo"} alt="" />
 								<div className="flex-row-center-full">
 
-								{comp.skill}
-								<input type="range" value={comp.level} min="0" max="5" 
-								className="level-cursor" />
+									{comp.skill}
+									<div className="range-container">
+										<div className="range">
+											<div className="range-cursor" style={{ left: `${comp.level * 2}vw` }}></div>
+										</div>
+										<div className="range-shadow"></div>
+									</div>
+
+
 								</div>
 							</li>
 						))}
@@ -66,13 +72,13 @@ const WindowContent = ({ type }) => {
 									{data.coordonnate.address}
 								</h3>
 							</div>
-							<div className="flex-row-center-full mt-5 mb-5 -ml-10 ">
+							<div className="flex flex-row flex-wrap items-center justify-around mt-5 mb-5 -ml-10 ">
 								{data.coordonnate.social.map((el, index) => (
-									<div key={index} className="flex flex-col items-center underline relative">
-									<h4>{el.social}</h4>
-									<img src={el.qrcode} alt="" className="h-[7vw] " />
-									
-									{/* <p className=" absolute -bottom-7" >{el.link2}</p>
+									<div key={index} className="flex flex-col items-center  underline relative">
+										<h4>{el.social}</h4>
+										<img src={el.qrcode} alt="" className="h-[7vw] " />
+
+										{/* <p className=" absolute -bottom-7" >{el.link2}</p>
 									<p className=" absolute -bottom-3" >{el.link1}</p> */}
 									</div>
 								))}
@@ -91,7 +97,7 @@ const WindowContent = ({ type }) => {
 													src={
 														data.coordonnate
 															.interestLogo[
-															{ index }
+														{ index }
 														]
 													}
 													alt=""
@@ -109,12 +115,17 @@ const WindowContent = ({ type }) => {
 								<ul>
 									{data.coordonnate.language.map(
 										(item, index) => (
-											<li key={index} className="list-disc ml-5">
-												{item.flag} 
+											<li key={index} className="list">
+												{item.flag}
 												<div className="flex-row-center-full">
-												{item.language} :{" "}
-												<input type="range" value={item.level} min="0" max="5" 
-												className="level-cursor"/>
+													{item.language} :{" "}
+
+													<div className="range-container">
+														<div className="range ">
+															<div className="range-cursor" style={{ left: `${item.level * 2}vw` }}></div>
+														</div>
+														<div className="range-shadow"></div>
+													</div>
 												</div>
 
 											</li>
@@ -130,14 +141,14 @@ const WindowContent = ({ type }) => {
 				return data.experiences.fr.map((exp, index) => {
 					return (
 						<div
-							className={`ml-5 mr-5 border-b-3 pb-5 ${index === data.experiences.fr.length-1 ? "border-none" : "border-dashed"}`}   
-							key={index} 
+							className={`ml-5 mr-5 border-b-3 pb-5 ${index === data.experiences.fr.length - 1 ? "border-none" : "border-dashed"}`}
+							key={index}
 						>
 							<div className="flex-row-center-full  mt-5 mb-2">
 								<h3 className="ml-5 h2">{exp.function}</h3>
 								<h4 className=" date">{exp.date}</h4>
 							</div>
-								<h3 className="location">{exp.location}</h3>
+							<h3 className="location">{exp.location}</h3>
 							<p className="mb-2 ml-5 whitespace-pre-line">{exp.description}</p>
 							<ul>
 								{exp.competences.map((item, index) => (
@@ -157,7 +168,7 @@ const WindowContent = ({ type }) => {
 				return data.formations.fr.map((form, index) => {
 					return (
 						<div
-							className={`ml-5 mr-5 border-b-3 pb-5 ${index === data.formations.fr.length-1 ? "border-none" : "border-dashed"}`}
+							className={`ml-5 mr-5 border-b-3 pb-5 ${index === data.formations.fr.length - 1 ? "border-none" : "border-dashed"}`}
 							key={form.date}
 						>
 							<div className="flex-row-center-full mt-5 mb-2">
@@ -180,7 +191,7 @@ const WindowContent = ({ type }) => {
 
 
 	return <>
-	{windowType({ type })}
+		{windowType({ type })}
 	</>;
 };
 

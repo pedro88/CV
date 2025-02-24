@@ -1,28 +1,23 @@
 @import "tailwindcss";
 
 .list {
-    @apply list-disc ml-15;
+    @apply list-disc mt-5 ml-15;
 }
 
 .flex-row-center-full {
     @apply flex flex-row justify-between items-center;
 }
 
-.level-cursor {
-    @apply appearance-none h-2 border-2  mr-10 accent-[#119DA4] rounded-none 
-    shadow-[3px_2px_0px_#13505B] bg-white hover:scale-105 duration-100 ease-out
-}
-
 .h2 {
     @apply underline font-medium text-lg mb-5;
 }
 
-.h3{
+.h3 {
     @apply underline font-medium;
 }
 
 .date {
-   @apply text-base italic ml-60 mr-5;
+    @apply text-base italic ml-60 mr-5;
 }
 
 .location {
@@ -30,16 +25,11 @@
 }
 
 .profile {
-    @apply shadow-[3px_2px_0px_#13505B] hover:scale-102 
-    duration-300 ease-out bg-[url(../public/ressources/photo/DSC_6335_1.webp)]
-    hover:bg-[url(../public/ressources/photo/DSC_6335-2_2.webp)]
-    bg-cover bg-center col-start-1 col-end-2 m-5 border-2
+    @apply shadow-[3px_2px_0px_#13505B] hover:scale-102 duration-300 ease-out bg-[url(../public/ressources/photo/DSC_6335_1.webp)] hover:bg-[url(../public/ressources/photo/DSC_6335-2_2.webp)] bg-cover bg-center col-start-1 col-end-2 m-5 border-2
 }
 
 .square {
-    @apply w-[20px] h-[20px] border-solid border-2 m-1 
-    flex flex-row justify-center items-center hover:scale-110
-     bg-white duration-100 ease-out
+    @apply w-[30px] h-[30px] border-solid border-2 m-1 flex flex-row justify-center items-center hover:scale-110 bg-white duration-100 ease-out
 }
 
 .title {
@@ -52,4 +42,20 @@
 
 .menu-logo {
     @apply h-15 w-15 mt-3 hover:scale-105 duration-100 ease-out
+}
+
+.range {
+    @apply w-[11vw] h-3 z-10 bg-white border-2 relative mr-[1vw] 
+}
+
+.range-cursor {
+    @apply h-8 rounded-b-4xl w-4 bg-[#119DA4] absolute border-2 -top-5
+}
+
+.range-shadow {
+    @apply absolute top-1.5 left-1.5 border-2 -z-10 bg-[#13505B] w-[11vw] h-3
+}
+
+.range-container {
+    @apply relative hover:scale-105 duration-100 ease-out
 }
