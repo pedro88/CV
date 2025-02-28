@@ -550,13 +550,13 @@ function App() {
 						</div>
 					</div>
 				</Draggable>
-				<div style={{ display: displayEasterEgg ? "block" : "none" }}>
+				{/* <div style={{ display: displayEasterEgg ? "block" : "none" }}>
 					<a href="https://www.youtube.com/watch?v=hqthspSKZV8">
 						<button className="border-2 bg-[#119DA4] p-3 rounded-lg my-0 mx-auto hover:scale-105 duration-100 ease-out ml-50">
 							Is this the end?
 						</button>
 					</a>
-				</div>
+				</div> */}
 			</div>
 		</>
 	);
