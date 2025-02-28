@@ -112,7 +112,7 @@ const data = {
     },
     projects : {
         fr :[
-            {name : "GameOfLife" , description : "Un jeu de la vie développé avec React dans le cadre de ma formation chez BeCode afin d'être utilisé comme support lors d'une présentation", qr: "./GameOfLife.png", link: "https://pedro88.github.io/responsive-web-3-0/"}, // Faute corrigée : "utiliser" → "utilisé"
+            {name : "GameOfLife" , description : "Un jeu de la vie développé avec React dans le cadre de ma formation chez BeCode afin d'être utilisé comme support lors d'une présentation", qr: "./GameOfLife.png", link: "https://pierre-react-game-of-life.netlify.app/"}, // Faute corrigée : "utiliser" → "utilisé"
             {name : "ReactCV" , description : "Le CV que vous avez sous les yeux. Développé en React et Tailwind", qr: "./ReactCV.png", link: "https://pierre-react-cv.netlify.app/"},
             {name : "Web3.0" , description : "Un simple mockup d'après un design Figma afin d'appréhender les concepts de design responsive dans le cadre de ma formation chez BeCode", qr: "./Responsive30.png", link: "https://pedro88.github.io/responsive-web-3-0/"}, // Faute corrigée : "concept" → "concepts"
         ]

@@ -77,7 +77,8 @@ const WindowContent = ({ type }) => {
 										className="flex flex-col items-center  underline relative"
 									>
 										<h4>{el.social}</h4>
-										<a href={el.link}>
+										<a href={el.link}
+										target="_blank">
 											<img
 												src={el.qrcode}
 												alt=""
@@ -220,7 +221,8 @@ const WindowContent = ({ type }) => {
 						>
 							<h3 className="ml-5 h2">{project.name}</h3>
 							<h4 className="ml-10 date">{}</h4>
-							<a href={project.link}>
+							<a href={project.link}
+							target="_blank">
 								<img
 									src={project.qr}
 									alt=""
