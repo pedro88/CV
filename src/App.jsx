@@ -278,7 +278,7 @@ function App() {
 		(imgProperties.height * pdfWidth) / imgProperties.width;
 		
 		const offsetX = (pdf.internal.pageSize.getWidth() - pdfWidth) / 2;
-		pdf.addImage(data, "PNG", offsetX, 10, pdfWidth, pdfHeight);
+		pdf.addImage(data, "PNG", offsetX, 5, pdfWidth, pdfHeight);
 		pdf.save("print.pdf");
 	};
 	
