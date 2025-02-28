@@ -220,6 +220,50 @@ function App() {
 	const handleReduceSkill = () => {
 		setReduceSkill((prev) => !prev);
 	};
+
+		//PROJECT
+		const [displayProject, setDisplayProject] = useState(true);
+		const [indexProject, setIndexProject] = useState(10);
+		const [positionProject, setPositionProject] = useState({ x: 0, y: 0 });
+		const handleDisplayProject = () => {
+			setDisplayProject((prev) => !prev);
+		};
+		
+		const snapToGridProject = (x, y) => {
+			const snappedX = Math.round(x / gridSize) * gridSize;
+			const snappedY = Math.round(y / gridSize) * gridSize;
+			return { x: snappedX, y: snappedY };
+		};
+		const handleDragProject = (e, data) => {
+			const { x, y } = snapToGridProject(data.x, data.y);
+			setPositionProject({ x, y });
+		};
+		
+		const handleIndexProject = () => {
+			if (
+				indexProject <= indexFormation ||
+				indexProject <= indexFunction ||
+				indexProject <= indexProfile ||
+				indexProject <= indexExperience
+			) {
+				setIndexSkill((prev) => {
+					let newIndex = prev + 10;
+					while (
+						newIndex <= indexFormation ||
+						newIndex <= indexFunction ||
+						newIndex <= indexProfile ||
+						newIndex <= indexExperience
+					) {
+						newIndex++;
+					}
+					return newIndex;
+				});
+			}
+		};
+		const [reduceProject, setReduceProject] = useState(false);
+		const handleReduceProject = () => {
+			setReduceProject((prev) => !prev);
+		};
 	
 	//PDF
 	const handleDisplayPDF = async () => {
@@ -266,7 +310,7 @@ function App() {
 
 			<div
 				ref={printRef}
-				className="ml-35 mr-10 mt-10 mb-10 p-3 grid grid-cols-2 gap-5"
+				className="mainDisplay"
 			>
 				<Draggable
 					position={positionFunction}
@@ -441,6 +485,43 @@ function App() {
 						</div>
 					</div>
 				</Draggable>
+
+				<Draggable
+					position={positionProject}
+					onStop={handleDragProject}
+					grid={[gridSize, gridSize]}
+				>
+					<div
+						style={{ zIndex: indexProject }}
+						className="relative col-span-1 row-span-1 w-full min-w-0"
+					>
+						<div
+							className={` absolute w-full min-w-0 top-3 left-3 -z-10 ${
+								displayProject ? "block" : "hidden"
+							}`}
+						>
+							<WindowShadow
+								type={"projects"}
+								handleReduce={handleReduceProject}
+								reduce={reduceProject}
+							></WindowShadow>
+						</div>
+
+						<div
+							className={` ${displayProject ? "block" : "hidden"} 
+					`}
+							onClick={handleIndexProject}
+						>
+							<Window
+								type={"projects"}
+								handleClose={handleDisplayProject}
+								handleReduce={handleReduceProject}
+								reduce={reduceProject}
+							/>
+						</div>
+					</div>
+				</Draggable>
+
 			</div>
 		</>
 	);

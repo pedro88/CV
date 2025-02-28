@@ -1,68 +1,72 @@
-
 const data = {
-    function : "Junior FullStack Developper",
+    function : "Développeur FullStack Junior", // Traduction du texte en français
     coordonnate: {
         name : "Pierre",
         lastName : "Sandré",
         nameLogo : "",
-        GSM : "0484966225",
+        GSM : "0484*******",
         GSMLogo : "",
         email : "sandrep_85@hotmail.com",
         emailLogo :"",
-        address : "Chevofosse, 2 - 4960 Malmedy",
+        address : "************, 4960 Malmedy",
         adressLogo : "",
-        interest : ["argentic photography", "3d printing", "gardenning"],
+        interest : ["Photographie argentique", "Impression 3D", "Jardinage", "Plongée sous-marine"], // Textes traduits et corrigés
         interestLogo : ["", "", ""],
         language : [
-            {language : "French", level : "5", flag : ""},
-            {language : "English", level : "4", flag : ""},
-            {language : "Spanish", level : "4", flag : ""},
-            {language : "German", level : "1", flag : ""}
+            {language : "Français", level : "5", flag : "./france"}, // Traduction du texte
+            {language : "Anglais", level : "4", flag : ""}, // Traduction du texte
+            {language : "Espagnol", level : "4", flag : ""}, // Traduction du texte
+            {language : "Allemand", level : "1", flag : ""} // Traduction du texte
         ],
         social :[
-            {social : "GitHub", qrcode : "./github.png", link1 : "www.github.com", link2 : "/pedro88" },
-            {social : "Linkedin", qrcode : "./linkedin.png", link1 : "www.linkedin.com", link2 :"/in/pierre-sandre" },
-            {social : "Codewars", qrcode : "./codewars.png", link1 : "www.codewars.com", link2 :"/users/pedro88" }
-
+            {social : "GitHub", qrcode : "./github.png", link : "https://github.com/pedro88" },
+            {social : "Linkedin", qrcode : "./linkedin.png", link: "https://linkedin.com/in/pierre-sandre" },
+            {social : "Codewars", qrcode : "./codewars.png", link : "https://codewars.com/users/pedro88" }
         ]
     },
     experiences :{
        fr :[
             {
                 function : "Animateur-Coordinateur",
-                location : "Maison de Jeunes de Vielsalm ",
+                location : "Maison de Jeunes de Vielsalm",
                 date : "2022-2024",
-                description: "Prise en charge de la coordination et d'une partie de l'animation de la maison de jeunes de Vielsalm durant ses 2 premières années d'existence. J'ai abondonné cet emploi dans le but de me réorienter professionnelement",
+                description: "Prise en charge de la coordination et d'une partie de l'animation de la maison de jeunes de Vielsalm durant ses 2 premières années d'existence. J'ai abandonné cet emploi dans le but de me réorienter professionnellement.", // Faute corrigée : "abondonné" → "abandonné"
                 competences: ["Coordination", "Gestion de conflit", "Gestion de projet"]
             },
             {
-                function : "Formateur techniques de batiment",
+                function : "Formateur en techniques du bâtiment", // Texte corrigé
                 location : "Régie de quartier de Dison",
                 date : "2020-2022",
-                description: "Emploi a caractère hautement social, j'étais chargé de la prise en charge d'un groupe de stagiaires adulte afin de leur apprendre les bases des techniques de rénovation et de construction",
+                description: "Emploi à caractère hautement social, j'étais chargé de la prise en charge d'un groupe de stagiaires adultes afin de leur apprendre les bases des techniques de rénovation et de construction.", // Fautes corrigées : "batiment" → "bâtiment", "stagiare" → "stagiaires"
                 competences: ["Coordination", "Gestion de conflit", "Gestion de projet", "Communication client"],
             },
             {
                 function : "Animateur-Coordinateur",
                 location : "ASBL Les P'tits CRAPAu",
-                date : "2019-2020",
-                description: "",
-                competences: ["Coordination", "Gestion de conflit", "Gestion de projet"],
+                date : "2018-2020",
+                description: "Animation d'ateliers visant l'acquisition d'autonomie dans différents domaines : Travail de l'acier, électronique, apiculture, etc.", // Fautes corrigées : "aquisition" → "acquisition", "atelier" → "ateliers"
+                competences: ["Coordination", "Gestion de conflit", "Gestion de projet", "Animation d'atelier"],
             },
-                        {
-                function : "Animateur-Coordinateur",
-                location : "Maison de Jeunes de Vielsalm ",
-                date : "2022-2024",
-                description: "Prise en charge de la coordination et d'une partie de l'animation de la maison de jeunes de Vielsalm durant ses 2 premières années d'existence. J'ai abondonné cet emploi dans le but de me réorienter professionnelement",
-                competences: ["Coordination", "Gestion de conflit", "Gestion de projet"],
+            {
+                function : "Animateur-Coordinateur Bénévole",
+                location : "ASBL Les P'tits CRAPAu",
+                date : "2016-Aujourd'hui",
+                description: "Animation d'ateliers visant l'acquisition d'autonomie dans différents domaines : Travail de l'acier, électronique, apiculture, etc.", // Fautes corrigées : "aquisition" → "acquisition", "atelier" → "ateliers"
+                competences: ["Coordination", "Gestion de conflit", "Gestion de projet", "Animation d'atelier"],
+            },
+            {
+                function : "Employé à la maintenance des bâtiments", // Texte corrigé
+                location : "Résidence des Arcades",
+                date : "2014-2016",
+                description: "Arrivé à ce poste sans réelles compétences dans les métiers du bâtiment, j'ai dû m'adapter et apprendre sur le tas pour répondre aux exigences de la fonction.", // Fautes corrigées : "compértences" → "compétences", "éxigences" → "exigences"
+                competences: ["Flexibilité", "Polyvalence", "Auto-formation", "Autonomie"], // Texte corrigé
             }
         ]
-
     },
     formations :{
         fr : [
             {
-                title : "Junior Developper",
+                title : "Développeur Junior", // Texte traduit
                 location :"BeCode - Liège",
                 date : "2024-2025",
                 competences : [
@@ -77,16 +81,25 @@ const data = {
             {
                 title : "Cours A et B en agriculture Bio",
                 location :"Le Crabe - Jodoigne",
-                date : "2014-2016",
+                date : "2012-2013",
                 competences : [
-                    "maraichage",
-                    "relation client",
-                    "gestion de projet",
-                    "comptabilité"
+                    "Maraîchage", // Faute corrigée : "maraichage" → "maraîchage"
+                    "Relation client",
+                    "Gestion de projet",
+                    "Comptabilité"
+                ]
+            },
+            {
+                title : "Formation à l'autonomie alimentaire",
+                location :"École Paysanne Indépendante - Bierleux", // Faute corrigée : "Bierleux" → "Bierleux" (pas de faute ici, mais ajout de l'accent sur "École")
+                date : "2011-2012",
+                competences : [
+                    "Maraîchage", // Faute corrigée : "maraichage" → "maraîchage"
+                    "Autonomie",
+                    "Travail collectif",
                 ]
             }
         ]
-
     },
     competences : {
         fr :[
@@ -96,7 +109,13 @@ const data = {
             {skill : "CSS/Tailwind" , level : "4", logo: ""},
             {skill : "SQL" , level : "2", logo: ""},
         ]
-
+    },
+    projects : {
+        fr :[
+            {name : "GameOfLife" , description : "Un jeu de la vie développé avec React dans le cadre de ma formation chez BeCode afin d'être utilisé comme support lors d'une présentation", qr: "./GameOfLife.png", link: "https://pedro88.github.io/responsive-web-3-0/"}, // Faute corrigée : "utiliser" → "utilisé"
+            {name : "ReactCV" , description : "Le CV que vous avez sous les yeux. Développé en React et Tailwind", qr: "./ReactCV.png", link: "https://pierre-react-cv.netlify.app/"},
+            {name : "Web3.0" , description : "Un simple mockup d'après un design Figma afin d'appréhender les concepts de design responsive dans le cadre de ma formation chez BeCode", qr: "./Responsive30.png", link: "https://pedro88.github.io/responsive-web-3-0/"}, // Faute corrigée : "concept" → "concepts"
+        ]
     }
 }
 

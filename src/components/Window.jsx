@@ -3,12 +3,7 @@ import WindowContent from "./WindowContent";
 import data from "../data/data.js";
 
 const Window = ({ type, handleClose, handleReduce, reduce }) => {
-
 	const [close, setClose] = useState(false);
-
-
-
-
 
 	return (
 		<>
@@ -26,32 +21,29 @@ const Window = ({ type, handleClose, handleReduce, reduce }) => {
 					{/* <div className='window-name'> */}
 
 					{type === "function" ? (
-						<h1 className="function">
-							{data.function}
-						</h1>
+						<h1 className="function">{data.function}</h1>
 					) : (
-						<h2 className="title">
-							{type.toUpperCase()}
-						</h2>
+						<h2 className="title">{type.toUpperCase()}</h2>
 					)}
 					<div className={`flex flex-row mr-5`}>
-						<div
-							className="square"
-						>
-							<div
-								onClick={handleReduce}
-								className="w-[10px] h-[10px] bg-contain bg-[url(../public/ressources/icons/g2.png)] "
-							></div>
-
+						<div className="relative hover:scale-110 duration-100 ease-out">
+							<div className="squareShadow"></div>
+							<div onClick={handleReduce} className="square">
+								<div className="w-[10px] h-[10px] flex items-center justify-center mb-4">
+									__
+								</div>
+							</div>
 						</div>
-						<div
-							className="square"
-						>
-							<div
-								value={type}
-								onClick={handleClose}
-								className="w-[10px] h-[10px] bg-contain bg-[url(../public/ressources/icons/g1.png)] "
-							></div>
+
+						<div className="relative hover:scale-110 duration-100 ease-out">
+						<div className="squareShadow"></div>
+							<div onClick={handleClose} className="square">
+								<div
+									value={type}
+									className="w-[10px] h-[10px] flex items-center justify-center mb-0.5">
+									X
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

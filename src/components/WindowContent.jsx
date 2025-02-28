@@ -2,12 +2,8 @@ import React from "react";
 import data from "../data/data.js";
 
 const WindowContent = ({ type }) => {
-
-
-
 	const windowType = () => {
 		switch (type) {
-
 			case "competences":
 				return (
 					<ul className="mt-5 mb-5">
@@ -15,16 +11,18 @@ const WindowContent = ({ type }) => {
 							<li className="list" key={index}>
 								<img src={"comp.logo"} alt="" />
 								<div className="flex-row-center-full">
-
 									{comp.skill}
 									<div className="range-container">
 										<div className="range">
-											<div className="range-cursor" style={{ left: `${comp.level * 2}vw` }}></div>
+											<div
+												className="range-cursor"
+												style={{
+													left: `${comp.level * 2}vw`,
+												}}
+											></div>
 										</div>
 										<div className="range-shadow"></div>
 									</div>
-
-
 								</div>
 							</li>
 						))}
@@ -37,7 +35,7 @@ const WindowContent = ({ type }) => {
 						<div className="profile"></div>
 						<div className="col-start-2 col-end-3 mt-5 mb-5 pl-10 border-l-3 border-dashed">
 							<div>
-								<h2 className="h2" >Coordonnates</h2>
+								<h2 className="h2">Coordonnates</h2>
 							</div>
 							<div className="flex">
 								<img src={data.coordonnate.nameLogo} alt="" />
@@ -74,9 +72,18 @@ const WindowContent = ({ type }) => {
 							</div>
 							<div className="flex flex-row flex-wrap items-center justify-around mt-5 mb-5 -ml-10 ">
 								{data.coordonnate.social.map((el, index) => (
-									<div key={index} className="flex flex-col items-center  underline relative">
+									<div
+										key={index}
+										className="flex flex-col items-center  underline relative"
+									>
 										<h4>{el.social}</h4>
-										<img src={el.qrcode} alt="" className="h-[7vw] " />
+										<a href={el.link}>
+											<img
+												src={el.qrcode}
+												alt=""
+												className="h-[7vw] hover:scale-105 duration-300 ease-out"
+											/>
+										</a>
 
 										{/* <p className=" absolute -bottom-7" >{el.link2}</p>
 									<p className=" absolute -bottom-3" >{el.link1}</p> */}
@@ -92,12 +99,15 @@ const WindowContent = ({ type }) => {
 								<ul>
 									{data.coordonnate.interest.map(
 										(item, index) => (
-											<li key={index} className="list-disc ml-5" >
+											<li
+												key={index}
+												className="list-disc ml-5"
+											>
 												<img
 													src={
 														data.coordonnate
 															.interestLogo[
-														{ index }
+															{ index }
 														]
 													}
 													alt=""
@@ -116,18 +126,23 @@ const WindowContent = ({ type }) => {
 									{data.coordonnate.language.map(
 										(item, index) => (
 											<li key={index} className="list">
-												{item.flag}
 												<div className="flex-row-center-full">
 													{item.language} :{" "}
-
 													<div className="range-container">
 														<div className="range ">
-															<div className="range-cursor" style={{ left: `${item.level * 2}vw` }}></div>
+															<div
+																className="range-cursor"
+																style={{
+																	left: `${
+																		item.level *
+																		2
+																	}vw`,
+																}}
+															></div>
 														</div>
 														<div className="range-shadow"></div>
 													</div>
 												</div>
-
 											</li>
 										)
 									)}
@@ -141,7 +156,11 @@ const WindowContent = ({ type }) => {
 				return data.experiences.fr.map((exp, index) => {
 					return (
 						<div
-							className={`ml-5 mr-5 border-b-3 pb-5 ${index === data.experiences.fr.length - 1 ? "border-none" : "border-dashed"}`}
+							className={`ml-5 mr-5 border-b-3 pb-5 ${
+								index === data.experiences.fr.length - 1
+									? "border-none"
+									: "border-dashed"
+							}`}
 							key={index}
 						>
 							<div className="flex-row-center-full  mt-5 mb-2">
@@ -149,10 +168,12 @@ const WindowContent = ({ type }) => {
 								<h4 className=" date">{exp.date}</h4>
 							</div>
 							<h3 className="location">{exp.location}</h3>
-							<p className="mb-2 ml-5 whitespace-pre-line">{exp.description}</p>
+							<p className="mb-2 ml-5 whitespace-pre-line">
+								{exp.description}
+							</p>
 							<ul>
 								{exp.competences.map((item, index) => (
-									<li className="list" key={index}>
+									<li className="list-disc ml-10" key={index}>
 										{item}
 									</li>
 								))}
@@ -168,7 +189,11 @@ const WindowContent = ({ type }) => {
 				return data.formations.fr.map((form, index) => {
 					return (
 						<div
-							className={`ml-5 mr-5 border-b-3 pb-5 ${index === data.formations.fr.length - 1 ? "border-none" : "border-dashed"}`}
+							className={`ml-5 mr-5 border-b-3 pb-5 ${
+								index === data.formations.fr.length - 1
+									? "border-none"
+									: "border-dashed"
+							}`}
 							key={form.date}
 						>
 							<div className="flex-row-center-full mt-5 mb-2">
@@ -186,13 +211,32 @@ const WindowContent = ({ type }) => {
 						</div>
 					);
 				});
+			case "projects":
+				return data.projects.fr.map((project, index) => {
+					return (
+						<div
+							className={`ml-5 mr-5 pb-5 flex flex-col items-center `}
+							key={project.date}
+						>
+							<h3 className="ml-5 h2">{project.name}</h3>
+							<h4 className="ml-10 date">{}</h4>
+							<a href={project.link}>
+								<img
+									src={project.qr}
+									alt=""
+									className="h-[7vw] hover:scale-105 duration-300 ease-out"
+								/>
+							</a>
+							<p className="mb-2 location">
+								{project.description}
+							</p>
+						</div>
+					);
+				});
 		}
 	};
 
-
-	return <>
-		{windowType({ type })}
-	</>;
+	return <>{windowType({ type })}</>;
 };
 
 export default WindowContent;

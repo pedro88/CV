@@ -29,7 +29,11 @@
 }
 
 .square {
-    @apply w-[30px] h-[30px] border-solid border-2 m-1 flex flex-row justify-center items-center hover:scale-110 bg-white duration-100 ease-out
+    @apply w-[30px] h-[30px] border-solid border-2 m-1 flex flex-row justify-center items-center bg-white  relative
+}
+
+.squareShadow {
+    @apply w-[30px] h-[30px] border-solid border-2 m-1 flex flex-row justify-center items-center bg-[#13505B]  top-1 left-1 absolute
 }
 
 .title {
@@ -58,4 +62,8 @@
 
 .range-container {
     @apply relative hover:scale-105 duration-100 ease-out
+}
+
+.mainDisplay {
+    @apply ml-35 mr-10 mt-10 mb-10 p-3 grid grid-cols-2 gap-5
 }
