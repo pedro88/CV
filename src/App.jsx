@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Window from "./components/Window";
 import Menu from "./components/Menu";
 import Draggable from "react-draggable";
@@ -10,7 +10,7 @@ import WindowShadow from "./components/WindowShadow";
 function App() {
 	const gridSize = 50;
 	const printRef = React.useRef();
-	
+
 	//EXPERIENCE
 	const [displayExperience, setDisplayExperience] = useState(true);
 	const [indexExperience, setIndexExperience] = useState(10);
@@ -55,7 +55,7 @@ function App() {
 	const handleReduceExperience = () => {
 		setReduceExperience((prev) => !prev);
 	};
-	
+
 	//FORMATION
 	const [displayFormation, setDisplayFormation] = useState(true);
 	const [indexFormation, setIndexFormation] = useState(10);
@@ -97,7 +97,7 @@ function App() {
 	const handleReduceFormation = () => {
 		setReduceFormation((prev) => !prev);
 	};
-	
+
 	//FUNCTION
 	const [displayFunction, setDisplayFunction] = useState(true);
 	const [indexFunction, setIndexFunction] = useState(10);
@@ -135,7 +135,7 @@ function App() {
 			});
 		}
 	};
-	
+
 	//PROFILE
 	const [displayProfile, setDisplayProfile] = useState(true);
 	const [indexProfile, setIndexProfile] = useState(10);
@@ -172,7 +172,7 @@ function App() {
 				return newIndex;
 			});
 		}
-	};	
+	};
 	const [reduceProfile, setReduceProfile] = useState(false);
 	const handleReduceProfile = () => {
 		setReduceProfile((prev) => !prev);
@@ -184,7 +184,7 @@ function App() {
 	const handleDisplaySkill = () => {
 		setDisplaySkill((prev) => !prev);
 	};
-	
+
 	const snapToGridSkill = (x, y) => {
 		const snappedX = Math.round(x / gridSize) * gridSize;
 		const snappedY = Math.round(y / gridSize) * gridSize;
@@ -194,7 +194,7 @@ function App() {
 		const { x, y } = snapToGridSkill(data.x, data.y);
 		setPositionSkill({ x, y });
 	};
-	
+
 	const handleIndexSkill = () => {
 		if (
 			indexSkill <= indexFormation ||
@@ -221,78 +221,109 @@ function App() {
 		setReduceSkill((prev) => !prev);
 	};
 
-		//PROJECT
-		const [displayProject, setDisplayProject] = useState(true);
-		const [indexProject, setIndexProject] = useState(10);
-		const [positionProject, setPositionProject] = useState({ x: 0, y: 0 });
-		const handleDisplayProject = () => {
-			setDisplayProject((prev) => !prev);
-		};
-		
-		const snapToGridProject = (x, y) => {
-			const snappedX = Math.round(x / gridSize) * gridSize;
-			const snappedY = Math.round(y / gridSize) * gridSize;
-			return { x: snappedX, y: snappedY };
-		};
-		const handleDragProject = (e, data) => {
-			const { x, y } = snapToGridProject(data.x, data.y);
-			setPositionProject({ x, y });
-		};
-		
-		const handleIndexProject = () => {
-			if (
-				indexProject <= indexFormation ||
-				indexProject <= indexFunction ||
-				indexProject <= indexProfile ||
-				indexProject <= indexExperience
-			) {
-				setIndexSkill((prev) => {
-					let newIndex = prev + 10;
-					while (
-						newIndex <= indexFormation ||
-						newIndex <= indexFunction ||
-						newIndex <= indexProfile ||
-						newIndex <= indexExperience
-					) {
-						newIndex++;
-					}
-					return newIndex;
-				});
-			}
-		};
-		const [reduceProject, setReduceProject] = useState(false);
-		const handleReduceProject = () => {
-			setReduceProject((prev) => !prev);
-		};
-	
+	//PROJECT
+	const [displayProject, setDisplayProject] = useState(true);
+	const [indexProject, setIndexProject] = useState(10);
+	const [positionProject, setPositionProject] = useState({ x: 0, y: 0 });
+	const handleDisplayProject = () => {
+		setDisplayProject((prev) => !prev);
+	};
+
+	const snapToGridProject = (x, y) => {
+		const snappedX = Math.round(x / gridSize) * gridSize;
+		const snappedY = Math.round(y / gridSize) * gridSize;
+		return { x: snappedX, y: snappedY };
+	};
+	const handleDragProject = (e, data) => {
+		const { x, y } = snapToGridProject(data.x, data.y);
+		setPositionProject({ x, y });
+	};
+
+	const handleIndexProject = () => {
+		if (
+			indexProject <= indexFormation ||
+			indexProject <= indexFunction ||
+			indexProject <= indexProfile ||
+			indexProject <= indexExperience
+		) {
+			setIndexSkill((prev) => {
+				let newIndex = prev + 10;
+				while (
+					newIndex <= indexFormation ||
+					newIndex <= indexFunction ||
+					newIndex <= indexProfile ||
+					newIndex <= indexExperience
+				) {
+					newIndex++;
+				}
+				return newIndex;
+			});
+		}
+	};
+	const [reduceProject, setReduceProject] = useState(false);
+	const handleReduceProject = () => {
+		setReduceProject((prev) => !prev);
+	};
+
 	//PDF
 	const handleDisplayPDF = async () => {
 		const element = printRef.current;
 		const canvas = await html2canvas(element);
 		const data = canvas.toDataURL("image/png");
-		
+
 		const pdf = new jsPDF("p", "mm", "a4");
 		const imgProperties = pdf.getImageProperties(data);
 		const pdfWidth = pdf.internal.pageSize.getWidth() - 20;
 		const pdfHeight =
-		(imgProperties.height * pdfWidth) / imgProperties.width;
-		
+			(imgProperties.height * pdfWidth) / imgProperties.width;
+
 		const offsetX = (pdf.internal.pageSize.getWidth() - pdfWidth) / 2;
 		pdf.addImage(data, "PNG", offsetX, 5, pdfWidth, pdfHeight);
 		pdf.save("print.pdf");
 	};
-	
+
 	//PRINTER
 	const handleDisplayPrinter = () => {
 		setDisplayPrinter((prev) => !prev);
 	};
-	
-	
+
 	//WRITE
 	const handleDisplayWrite = () => {
 		setDisplayWrite((prev) => !prev);
 	};
-	
+
+	//EASTER EGG
+	const [displayEasterEgg, SetDisplayEasterEgg] = useState(false);
+	useEffect(() => {
+		if (
+			!displayExperience &&
+			!displayFunction &&
+			!displayFormation &&
+			!displayProfile &&
+			!displayProject &&
+			!displaySkill
+		) {
+			SetDisplayEasterEgg(true);
+		}
+		if (
+			displayExperience ||
+			displayFunction ||
+			displayFormation ||
+			displayProfile ||
+			displayProject ||
+			displaySkill
+		) {
+			SetDisplayEasterEgg(false);
+		}
+	}, [
+		displayExperience,
+		displayFunction,
+		displayFormation,
+		displayProfile,
+		displayProject,
+		displaySkill,
+	]);
+
 	return (
 		<>
 			<div>
@@ -309,10 +340,7 @@ function App() {
 				/>
 			</div>
 
-			<div
-				ref={printRef}
-				className="mainDisplay"
-			>
+			<div ref={printRef} className="mainDisplay">
 				<Draggable
 					position={positionFunction}
 					onStop={handleDragFunction}
@@ -522,7 +550,13 @@ function App() {
 						</div>
 					</div>
 				</Draggable>
-
+				<div style={{ display: displayEasterEgg ? "block" : "none" }}>
+					<a href="https://www.youtube.com/watch?v=hqthspSKZV8">
+						<button className="border-2 bg-[#119DA4] p-3 rounded-lg my-0 mx-auto hover:scale-105 duration-100 ease-out ml-50">
+							Is this the end?
+						</button>
+					</a>
+				</div>
 			</div>
 		</>
 	);
