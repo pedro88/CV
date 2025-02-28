@@ -305,6 +305,7 @@ function App() {
 					handleDisplayProfile={handleDisplayProfile}
 					handleDisplaySkill={handleDisplaySkill}
 					handleDisplayWrite={handleDisplayWrite}
+					handleDisplayProject={handleDisplayProject}
 				/>
 			</div>
 
