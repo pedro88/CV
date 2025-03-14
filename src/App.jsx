@@ -442,6 +442,7 @@ function App() {
 					</div>
 				</Draggable>
 			</div>
+			{/* <Window type={"form"}/> */}
 		</>
 	);
 }
