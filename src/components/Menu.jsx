@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Menu = ({ handleDisplayExperience, handleDisplayFormation, handleDisplayFunction, handleDisplayPDF, handleDisplayPrinter, handleDisplayProfile, handleDisplaySkill, handleDisplayWrite}) => {
+const Menu = ({ handleDisplayExperience, handleDisplayProject, handleDisplayFormation, handleDisplayFunction, handleDisplayPDF, handleDisplayPrinter, handleDisplayProfile, handleDisplaySkill, handleDisplayWrite}) => {
     const [menu, setMenu] = useState(false)
 
     const handleMenu = () => {
@@ -9,8 +9,8 @@ const Menu = ({ handleDisplayExperience, handleDisplayFormation, handleDisplayFu
   return (
     <>
     <div className='absolute h-10 ml-10'>
-        <div onClick={handleMenu} 
-        className={`hover:scale-102 duration-300 ease-out hover:rotate-180}`}>
+        <div onMouseDown={handleMenu} 
+        className={`hover:rotate-180 hover:scale-102 duration-300 ease-out }`}>
 
         <img className=' h-10' src="./menu-half-border.png" alt=""/>
         <img className={` h-10 mt-0.5 ${menu ? "hidden" : "block"}`} src="./menu-half-border.png" alt=""/>
@@ -22,9 +22,11 @@ const Menu = ({ handleDisplayExperience, handleDisplayFormation, handleDisplayFu
         <img onClick={handleDisplayExperience} className='menu-logo ' src="./experiences.png" alt="" />
         <img onClick={handleDisplayFormation} className='menu-logo ' src="./formation.png" alt="" />
         <img onClick={handleDisplaySkill} className='menu-logo ' src="./skill.png" alt="" />
+        <img onClick={handleDisplayProject} className='menu-logo ' src="./project.png" alt="" />
         <img onClick={handleDisplayPDF} className='menu-logo ' src="./pdf.png" alt="" />
-        <img onClick={handleDisplayPrinter} className='menu-logo ' src="./printer.png" alt="" />
-        <img onClick={handleDisplayWrite} className='menu-logo ' src="./write.png" alt="" />
+
+        {/* <img onClick={handleDisplayPrinter} className='menu-logo ' src="./printer.png" alt="" />
+        <img onClick={handleDisplayWrite} className='menu-logo ' src="./write.png" alt="" /> */}
         <img className=' h-10 mt-3' src="./menu-half-border.png" alt=""/>
 
     </div>
