@@ -36,7 +36,7 @@ const Window = ({ type, handleClose, handleReduce, reduce }) => {
 						</div>
 
 						<div className="relative hover:scale-110 duration-100 ease-out">
-						<div className="squareShadow"></div>
+							<div className="squareShadow"></div>
 							<div onClick={handleClose} className="square">
 								<div
 									value={type}
@@ -51,13 +51,12 @@ const Window = ({ type, handleClose, handleReduce, reduce }) => {
 				<div
 					className={`
             transition-all duration-500 ease-in-out transform
-      ${
-			type === "experiences" ||
-			type === "formations" ||
-			type === "competences"
-				? "w-[100%]"
-				: "w-[100%] grid grid-rows-[auto auto] grid-cols-3"
-		} 
+     						${type === "experiences" ||
+							type === "formations" ||
+							type === "competences"
+							? "w-[100%]"
+							: "w-[100%] grid grid-rows-[auto auto] grid-cols-3"
+						} 
 				${reduce ? "hidden" : "block"}
     			${close ? "hidden" : "block"}`}
 				>

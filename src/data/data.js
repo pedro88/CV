@@ -1,6 +1,6 @@
 const data = {
     function : "Développeur FullStack Junior", // Traduction du texte en français
-    coordonnate: {
+    profil: {
         name : "Pierre",
         lastName : "Sandré",
         nameLogo : "",

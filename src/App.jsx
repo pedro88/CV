@@ -386,7 +386,7 @@ function App() {
 							}`}
 						>
 							<WindowShadow
-								type={"coordonnate"}
+								type={"profil"}
 								handleReduce={handleReduceProfile}
 								reduce={reduceProfile}
 							></WindowShadow>
@@ -398,7 +398,7 @@ function App() {
 							onClick={handleIndexProfile}
 						>
 							<Window
-								type={"coordonnate"}
+								type={"profil"}
 								handleClose={handleDisplayProfile}
 								handleReduce={handleReduceProfile}
 								reduce={reduceProfile}
@@ -530,7 +530,7 @@ function App() {
 							}`}
 						>
 							<WindowShadow
-								type={"projects"}
+								type={"projets"}
 								handleReduce={handleReduceProject}
 								reduce={reduceProject}
 							></WindowShadow>
@@ -542,7 +542,7 @@ function App() {
 							onClick={handleIndexProject}
 						>
 							<Window
-								type={"projects"}
+								type={"projets"}
 								handleClose={handleDisplayProject}
 								handleReduce={handleReduceProject}
 								reduce={reduceProject}
@@ -558,6 +558,7 @@ function App() {
 					</a>
 				</div> */}
 			</div>
+			{/* <Window type={"form"}/> */}
 		</>
 	);
 }

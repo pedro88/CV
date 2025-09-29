@@ -1,5 +1,6 @@
 import React from "react";
 import data from "../data/data.js";
+import LevelForm from "./LevelForm.jsx";
 
 const WindowContent = ({ type }) => {
 	const windowType = () => {
@@ -29,49 +30,49 @@ const WindowContent = ({ type }) => {
 					</ul>
 				);
 
-			case "coordonnate":
+			case "profil":
 				return (
 					<>
 						<div className="profile"></div>
 						<div className="col-start-2 col-end-3 mt-5 mb-5 pl-10 border-l-3 border-dashed">
 							<div>
-								<h2 className="h2">Coordonnates</h2>
+								<h2 className="h2" >Coordonnées</h2>
 							</div>
 							<div className="flex">
-								<img src={data.coordonnate.nameLogo} alt="" />
-								<h3 className="h3">name </h3>
+								<img src={data.profil.nameLogo} alt="" />
+								<h3 className="h3">Nom </h3>
 								<h3>
 									{" : "}
-									{data.coordonnate.name}{" "}
-									{data.coordonnate.lastName}
+									{data.profil.name}{" "}
+									{data.profil.lastName}
 								</h3>
 							</div>
 							<div className="flex">
-								<img src={data.coordonnate.GSMLogo} alt="" />
+								<img src={data.profil.GSMLogo} alt="" />
 								<h3 className="h3">GSM </h3>
 								<h3>
 									{" : "}
-									{data.coordonnate.GSM}
+									{data.profil.GSM}
 								</h3>
 							</div>
 							<div className="flex">
-								<img src={data.coordonnate.emailLogo} alt="" />
-								<h3 className="h3">email </h3>
+								<img src={data.profil.emailLogo} alt="" />
+								<h3 className="h3">Email </h3>
 								<h3>
 									{" : "}
-									{data.coordonnate.email}
+									{data.profil.email}
 								</h3>
 							</div>
 							<div className="flex">
-								<img src={data.coordonnate.adressLogo} alt="" />
-								<h3 className="h3">address </h3>
+								<img src={data.profil.adressLogo} alt="" />
+								<h3 className="h3">Adresse </h3>
 								<h3>
 									{" : "}
-									{data.coordonnate.address}
+									{data.profil.address}
 								</h3>
 							</div>
 							<div className="flex flex-row flex-wrap items-center justify-around mt-5 mb-5 -ml-10 ">
-								{data.coordonnate.social.map((el, index) => (
+								{data.profil.social.map((el, index) => (
 									<div
 										key={index}
 										className="flex flex-col items-center  underline relative"
@@ -94,11 +95,11 @@ const WindowContent = ({ type }) => {
 						</div>
 						<div className="col-start-3 col-end-4 border-l-3 border-dashed mt-5 mb-5 pl-10 ">
 							<div>
-								<h2 className="h2">Interest</h2>
+								<h2 className="h2">Hobby</h2>
 							</div>
 							<div>
 								<ul>
-									{data.coordonnate.interest.map(
+									{data.profil.interest.map(
 										(item, index) => (
 											<li
 												key={index}
@@ -106,7 +107,7 @@ const WindowContent = ({ type }) => {
 											>
 												<img
 													src={
-														data.coordonnate
+														data.profil
 															.interestLogo[
 															{ index }
 														]
@@ -120,11 +121,11 @@ const WindowContent = ({ type }) => {
 								</ul>
 							</div>
 							<div>
-								<h2 className="h2 mt-5">Language</h2>
+								<h2 className="h2 mt-5">Langues</h2>
 							</div>
 							<div>
 								<ul>
-									{data.coordonnate.language.map(
+									{data.profil.language.map(
 										(item, index) => (
 											<li key={index} className="list">
 												<div className="flex-row-center-full">
@@ -212,7 +213,39 @@ const WindowContent = ({ type }) => {
 						</div>
 					);
 				});
-			case "projects":
+
+			case "form" :
+				return (
+					<form action="">
+						<h3>Profil: </h3>
+						<label htmlFor="name">name: </label>
+						<input type="text" id="name" />
+						<br />
+						<label htmlFor="lastName">last name: </label>
+						<input type="text"  id="lastName"/>
+						<br />
+						<label htmlFor="GSM">gsm: </label>
+						<input type="text" id="GSM" />
+						<br />
+						<label htmlFor="email">email: </label>
+						<input type="text" id="email" />
+						<br />
+						<label htmlFor="adress">adress: </label>
+						<input type="text" id="adress" />
+						<br />
+
+						<label htmlFor="laguage">language: </label>
+						<input type="text" id="name" />
+						<LevelForm/>
+						<br />
+
+
+					</form>
+
+
+
+				)
+			case "projets":
 				return data.projects.fr.map((project, index) => {
 					return (
 						<div
