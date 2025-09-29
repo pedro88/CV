@@ -26,6 +26,13 @@ const data = {
     },
     experiences :{
        fr :[
+          {
+                function : "Stagiaire Web développeur",
+                location : "Capsule Corp",
+                date : "2025",
+                description: "Homie, l'application dévellopée par Capsule Corp est un projet full stack basé sur Typescript, React et Redux avec un backend Express et TypeORM. Durant ce stage j'ai pricipalement travailler sur le portage complet de l'application dans sa version mobile ainsi que sur l'implémentation de Zod pour la validation de données coté backend", // Faute corrigée : "abondonné" → "abandonné"
+                competences: ["Autonomie", "Communication d'équipe", "Adaptation"]
+            },
             {
                 function : "Animateur-Coordinateur",
                 location : "Maison de Jeunes de Vielsalm",
@@ -103,11 +110,11 @@ const data = {
     },
     competences : {
         fr :[
-            {skill : "JS/React" , level : "4", logo: ""},
+            {skill : "TS/React" , level : "4", logo: ""},
             {skill : "Node.js/Express" , level : "4", logo: ""},
-            {skill : "PHP/Laravel" , level : "3", logo: ""},
+            {skill : "PHP/Laravel" , level : "2", logo: ""},
             {skill : "CSS/Tailwind" , level : "4", logo: ""},
-            {skill : "SQL" , level : "2", logo: ""},
+            {skill : "SQL" , level : "3", logo: ""},
         ]
     },
     projects : {
